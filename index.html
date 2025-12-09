@@ -18,6 +18,22 @@
 
 <body>
 
+    <!-- WIDGET DE MÚSICA FLOTANTE (Amuleto Azul Neblina) -->
+    <div id="music-widget" class="music-widget" aria-label="Control de música de la invitación">
+        <div class="amulet">
+            <div class="amulet-inner">
+                <i id="mw-icon" class="bi bi-music-note-beamed"></i>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="mw-play" class="mw-btn" title="Reproducir"><i class="bi bi-play-fill"></i></button>
+            <button id="mw-pause" class="mw-btn" title="Pausar"><i class="bi bi-pause-fill"></i></button>
+            <button id="mw-mute" class="mw-btn" title="Silenciar / activar sonido"><i
+                    class="bi bi-volume-mute-fill"></i></button>
+        </div>
+    </div>
+
     <!-- HERO / PORTADA -->
     <header class="hero">
         <div class="hero-overlay"></div>
@@ -27,7 +43,7 @@
             <h1 class="hero-title">Shirel Daniela<br /><span class="accent">Ruiz Ramírez</span></h1>
             <p class="hero-sub">Te invita a celebrar sus<br><strong>XV años</strong></p>
 
-            <p class="quote">"Donde comienza el sueño más bonito..."</p>
+            <p class="quote">"Que la música y los sueños nos acompañen en esta noche encantada."</p>
 
             <div class="hero-meta mt-3">
                 <div class="d-inline-block me-3">
@@ -39,7 +55,6 @@
 
         <!-- pétalos animados -->
         <div class="petals" aria-hidden="true">
-            <span class="petal"></span><span class="petal"></span><span class="petal"></span>
             <span class="petal"></span><span class="petal"></span><span class="petal"></span>
             <span class="petal"></span><span class="petal"></span><span class="petal"></span>
         </div>
@@ -56,8 +71,8 @@
 
                     <ul class="list-unstyled fs-6">
                         <li><strong>Fecha:</strong> 30 de mayo de 2026</li>
-                        <li><strong>Hora:</strong> 3:00 PM</li>
-                        <li><strong>Lugar:</strong> Salón de Eventos — "LA TERRAZA"</li>
+                        <li><strong>Hora:</strong> 3;00 PM</li>
+                        <li><strong>Lugar:</strong> Salón de Eventos "LA TERRAZA"</li>
                     </ul>
 
                     <p class="mt-3">Frase especial: <em>"Que la música y los sueños nos acompañen en esta noche
@@ -73,185 +88,175 @@
 
                 <div class="col-md-6 mt-4 mt-md-0">
                     <div class="map-wrap">
+                        <!-- iframe de Google Maps (si no carga, usa el link arriba) -->
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14979.506537895442!2d-98.0792585!3d20.1808614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d08b13344ec8c9%3A0xfe61716a7b515d0c!2sSal%C3%B3n%20de%20Eventos%20La%20Terraza!5e0!3m2!1ses-419!2smx!4v1765303859809!5m2!1ses-419!2smx"
                             width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                        <small class="text-muted d-block mt-2">Si el mapa no funciona en tu dispositivo, abre <a
-                                href="https://maps.app.goo.gl/sY2FWg6m3bnCsk3w9" target="_blank" rel="noopener">este
-                                enlace</a>.</small>
+                        <small class="text-muted d-block mt-2">Mapa integrado. Si prefieres, abre la ubicación en Google
+                            Maps: <a href="https://maps.app.goo.gl/sY2FWg6m3bnCsk3w9" target="_blank"
+                                rel="noopener">Abrir en Maps</a></small>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- GALERÍA (Carrusel tipo "mágico") -->
         <section id="galeria" class="bg-soft py-5">
             <div class="container">
                 <h3 class="section-title text-center">Galería</h3>
-                <p class="text-center text-muted mb-4">Imágenes inspiradas en <em>La Bella Durmiente</em>. 
+                <p class="text-center text-muted mb-4">Imágenes inspiradas en <em>La Bella Durmiente</em>.
 
-                <div id="galeriaCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="d-flex justify-content-center">
-                                <figure class="img-frame">
-                                    <img src="/img/1.png" class="d-block rounded" alt="galeria 1">
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="d-flex justify-content-center">
-                                <figure class="img-frame">
-                                    <img src="/img/3.png" class="d-block rounded" alt="galeria 2">
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="d-flex justify-content-center">
-                                <figure class="img-frame">
-                                    <img src="/img/4.jpeg" class="d-block rounded" alt="galeria 3">
-                                </figure>
-                            </div>
-                        </div>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4">
+                        <a class="img-card" href="#" target="_blank" rel="noopener">
+                            <img src="img/1.png" alt="galeria 1" class="img-fluid rounded shadow-sm">
+                        </a>
                     </div>
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#galeriaCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#galeriaCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
-                </div>
-            </div>
-        </section>
-        
-        <section class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-md-8">
-                    <div class="btn-group" role="group" aria-label="controles de música">
-                        <button id="playBtn" class="btn btn-outline-primary"><i class="bi bi-play-fill"></i>
-                            Reproducir</button>
-                        <button id="pauseBtn" class="btn btn-outline-secondary"><i class="bi bi-pause-fill"></i>
-                            Pausar</button>
+                    <div class="col-6 col-md-4">
+                        <a class="img-card" href="#" target="_blank" rel="noopener">
+                            <img src="img/2.jpeg" alt="galeria 2" class="img-fluid rounded shadow-sm">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <a class="img-card" href="#" target="_blank" rel="noopener">
+                            <img src="img/3.png" alt="galeria 3" class="img-fluid rounded shadow-sm">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <a class="img-card" href="#" target="_blank" rel="noopener">
+                            <img src="img/4.jpeg" alt="galeria 3" class="img-fluid rounded shadow-sm">
+                        </a>
                     </div>
                 </div>
             </div>
-
-            <!-- contenedor para el player (invisible) -->
-            <div id="player-container" class="mt-3 visually-hidden">
-                <div id="yt-player"></div>
-            </div>
         </section>
+
+        <!-- MÚSICA: reproductor oculto de YouTube (solo snippet 00:00-00:28 con loop) -->
+        <div id="yt-player-wrapper" style="display:none;">
+            <!-- el src tiene start=0 end=28 loop mediante playlist, enablejsapi para control -->
+            <iframe id="ytplayer"
+                src="https://www.youtube.com/embed/g0Ocaw8um1g?rel=0&enablejsapi=1&controls=0&start=0&end=28&loop=1&playlist=g0Ocaw8um1g&autoplay=1"
+                allow="autoplay; encrypted-media"></iframe>
+        </div>
 
         <!-- PIE (footer) -->
         <footer class="footer py-4 bg-gradient">
             <div class="container text-center">
                 <p class="mb-1">© 2026 • Invitación de Shirel Daniela</p>
-                <small class="text-muted">Invitación generada con ❤️</small>
+                <small class="text-muted">Invitación generada con ❤️ </small>
             </div>
         </footer>
     </main>
 
     <!-- SCRIPTS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- YouTube IFrame API -->
     <script>
-        // 1) cargar API
-        let tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        document.head.appendChild(tag);
+        // -----------------------------
+        // Player messaging helper
+        // -----------------------------
+        const player = document.getElementById('ytplayer');
 
-        // 2) variables
-        let player;
-        const VIDEO_ID = 'g0Ocaw8um1g'; // tu link
-        const SEG_END = 28; // segundos (0:28)
-        let loopEnabled = true;
-
-        // 3) función llamada por la API
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('yt-player', {
-                height: '0',
-                width: '0',
-                videoId: VIDEO_ID,
-                playerVars: {
-                    autoplay: 0,
-                    controls: 0,
-                    disablekb: 1,
-                    modestbranding: 1,
-                    rel: 0,
-                    start: 0
-                },
-                events: {
-                    onReady: onPlayerReady,
-                    onStateChange: onPlayerStateChange
-                }
-            });
+        function postMessageToPlayer(command) {
+            if (!player || !player.contentWindow) return;
+            player.contentWindow.postMessage(JSON.stringify(command), '*');
         }
 
-        function onPlayerReady() {
-            // listo
-        }
+        // Inicialmente intentamos autoplay (silenciado)
+        // y proveemos controles en el widget para play/pause/mute.
+        const btnPlay = document.getElementById('mw-play');
+        const btnPause = document.getElementById('mw-pause');
+        const btnMute = document.getElementById('mw-mute');
 
-        function onPlayerStateChange(e) {
-            // si se está reproduciendo, crear comprobador para loop 0..SEG_END
-            if (e.data === YT.PlayerState.PLAYING) {
-                ensureLoopChecker();
+        let isMuted = true;
+        let isPlaying = false;
+
+        // Play
+        btnPlay.addEventListener('click', () => {
+            postMessageToPlayer({ event: 'command', func: 'playVideo' });
+            // cuando el usuario toca play, quitamos el mute si estaba
+            if (isMuted) {
+                postMessageToPlayer({ event: 'command', func: 'unMute' });
+                isMuted = false;
+                btnMute.innerHTML = '<i class="bi bi-volume-up-fill"></i>';
             }
-        }
-
-        // checker que regresa al inicio cuando llega a SEG_END
-        let loopCheckerInterval = null;
-        function ensureLoopChecker() {
-            if (loopCheckerInterval) clearInterval(loopCheckerInterval);
-            loopCheckerInterval = setInterval(() => {
-                if (!player || typeof player.getCurrentTime !== 'function') return;
-                const t = player.getCurrentTime();
-                if (loopEnabled && t >= SEG_END - 0.1) {
-                    player.seekTo(0, true);
-                } else if (!loopEnabled && t >= SEG_END - 0.1) {
-                    player.pauseVideo();
-                    player.seekTo(0, true);
-                }
-            }, 250);
-        }
-
-        // controles UI
-        document.addEventListener('click', (ev) => {
-            if (!ev.target) return;
+            isPlaying = true;
         });
 
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('playBtn').addEventListener('click', () => {
-                if (!player) return alert('El reproductor aún se está inicializando. Intenta de nuevo en 1s.');
-                player.playVideo();
-                player.unMute();
-            });
-            document.getElementById('pauseBtn').addEventListener('click', () => {
-                if (!player) return;
-                player.pauseVideo();
-            });
-            document.getElementById('muteBtn').addEventListener('click', () => {
-                if (!player) return;
-                if (player.isMuted()) {
-                    player.unMute();
-                    document.getElementById('muteBtn').innerHTML = '<i class="bi bi-volume-up-fill"></i> Sonar';
+        // Pause
+        btnPause.addEventListener('click', () => {
+            postMessageToPlayer({ event: 'command', func: 'pauseVideo' });
+            isPlaying = false;
+        });
+
+        // Mute / unmute
+        btnMute.addEventListener('click', () => {
+            if (isMuted) {
+                postMessageToPlayer({ event: 'command', func: 'unMute' });
+                btnMute.innerHTML = '<i class="bi bi-volume-up-fill"></i>';
+            } else {
+                postMessageToPlayer({ event: 'command', func: 'mute' });
+                btnMute.innerHTML = '<i class="bi bi-volume-mute-fill"></i>';
+            }
+            isMuted = !isMuted;
+        });
+
+        // Al cargar intentaremos iniciar silenciado (algunos navegadores permiten autoplay si está muteado)
+        window.addEventListener('load', () => {
+            // Mute & play attempt
+            setTimeout(() => {
+                postMessageToPlayer({ event: 'command', func: 'mute' });
+                postMessageToPlayer({ event: 'command', func: 'playVideo' });
+                isMuted = true;
+                isPlaying = true;
+                btnMute.innerHTML = '<i class="bi bi-volume-mute-fill"></i>';
+            }, 800);
+        });
+
+        // Mejorar accesibilidad: tecla espacio sobre el widget reproduce/pausa
+        document.getElementById('music-widget').addEventListener('keydown', (e) => {
+            if (e.key === ' ' || e.key === 'Spacebar') {
+                e.preventDefault();
+                if (isPlaying) {
+                    postMessageToPlayer({ event: 'command', func: 'pauseVideo' });
+                    isPlaying = false;
                 } else {
-                    player.mute();
-                    document.getElementById('muteBtn').innerHTML = '<i class="bi bi-volume-mute-fill"></i> Silenciar';
+                    postMessageToPlayer({ event: 'command', func: 'playVideo' });
+                    isPlaying = true;
+                }
+            }
+        });
+
+        // Drag pequeño para mover widget (opcional — solo desplazamiento limitado)
+        (function enableDrag() {
+            const widget = document.getElementById('music-widget');
+            let isDown = false, startX, startY, origX, origY;
+            widget.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.clientX;
+                startY = e.clientY;
+                const rect = widget.getBoundingClientRect();
+                origX = rect.left;
+                origY = rect.top;
+                widget.classList.add('dragging');
+            });
+            window.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+                // limitar el movimiento para que siempre esté visible
+                let left = Math.max(8, Math.min(window.innerWidth - widget.offsetWidth - 8, origX + dx));
+                let top = Math.max(8, Math.min(window.innerHeight - widget.offsetHeight - 8, origY + dy));
+                widget.style.left = left + 'px';
+                widget.style.top = top + 'px';
+            });
+            window.addEventListener('mouseup', () => {
+                if (isDown) {
+                    isDown = false;
+                    widget.classList.remove('dragging');
                 }
             });
-            document.getElementById('loopToggle').addEventListener('click', (e) => {
-                loopEnabled = !loopEnabled;
-                e.currentTarget.textContent = 'Loop: ' + (loopEnabled ? 'ON' : 'OFF');
-            });
-        });
+            // permitir focus para accesibilidad
+            widget.tabIndex = 0;
+        })();
     </script>
 
 </body>
