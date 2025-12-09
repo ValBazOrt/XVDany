@@ -1,143 +1,177 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XV Años - Shirel Daniela</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Invitación XV • Shirel Daniela</title>
 
-    <!-- Fuente elegante -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Bootstrap (solo utilidades y grid) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #e3e6ee; /* Azul Neblina suave */
-            color: #2a2a2a;
-        }
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://i.imgur.com/2RdfR1v.jpeg'); /* Imagen temática Bella Durmiente */
-            background-size: cover;
-            background-position: center;
-            color: white;
-        }
-
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 48px;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 20px;
-            margin-top: 10px;
-        }
-
-        .section {
-            padding: 30px 20px;
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .titulo {
-            font-family: 'Playfair Display', serif;
-            font-size: 32px;
-            color: #3b4a6b;
-            margin-bottom: 10px;
-        }
-
-        .info {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .mapa {
-            margin: 30px auto;
-            width: 90%;
-            max-width: 600px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        iframe {
-            width: 100%;
-            height: 350px;
-            border: none;
-        }
-
-        .botones {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 12px 22px;
-            border-radius: 10px;
-            text-decoration: none;
-            background: #3b4a6b;
-            color: white;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: #5c6b8c;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #d7dbe6;
-            margin-top: 40px;
-            font-size: 14px;
-        }
-    </style>
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-<header>
-    <h1>XV Años de Shirel Daniela</h1>
-    <p>Con cariño te invitamos a celebrar este día tan especial</p>
-</header>
+  <!-- HERO / PORTADA -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
 
-<section class="section">
-    <h2 class="titulo">Detalles del Evento</h2>
-    <p class="info">
-        <strong>Fecha:</strong> 30 de mayo de 2026<br>
-        <strong>Hora:</strong> 3:00 p.m.<br>
-        <strong>Lugar:</strong> Salón en Huauchinango, Puebla
-    </p>
+    <div class="hero-content container text-center">
+      <div class="logo-crest" aria-hidden="true">👑</div>
+      <h1 class="hero-title">Shirel Daniela<br/><span class="accent">Ruiz Ramírez</span></h1>
+      <p class="hero-sub">Te invita a celebrar sus<br><strong>XV años</strong></p>
 
-    <!-- MAPA INSERTADO -->
-    <div class="mapa">
-        <iframe src="https://www.google.com/maps/place/Sal%C3%B3n+de+Eventos+La+Terraza/@20.1752192,-98.0745961,16z/data=!4m6!3m5!1s0x85d08b13344ec8c9:0xfe61716a7b515d0c!8m2!3d20.1775785!4d-98.0742814!16s%2Fg%2F11gjw3b9kh?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D"></iframe>
+      <p class="quote">"Donde comienza el sueño más bonito..."</p>
+
+      <div class="hero-meta mt-3">
+        <div class="d-inline-block me-3">
+          <i class="bi bi-calendar-event"></i>
+          <strong>30 de mayo de 2026</strong>
+        </div>
+
+        <div class="d-inline-block">
+          <i class="bi bi-geo-alt-fill"></i>
+          <strong>Ver ubicación</strong>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <a class="btn btn-primary btn-lg me-2" href="#detalles">Ver detalles</a>
+        <a class="btn btn-outline-light btn-lg" href="#galeria">Galería</a>
+      </div>
     </div>
-</section>
 
-<section class="section">
-    <h2 class="titulo">Contacto</h2>
-    <p class="info">Para cualquier duda o confirmación puedes comunicarte:</p>
-
-    <div class="botones">
-        <a class="btn" href="mailto:vale_baza@hotmail.com">Correo</a>
-        <a class="btn" href="https://wa.me/527761350407" target="_blank">WhatsApp</a>
+    <!-- pétalos animados -->
+    <div class="petals" aria-hidden="true">
+      <span class="petal"></span><span class="petal"></span><span class="petal"></span>
+      <span class="petal"></span><span class="petal"></span><span class="petal"></span>
+      <span class="petal"></span><span class="petal"></span><span class="petal"></span>
     </div>
-</section>
+  </header>
 
-<footer>
-    © 2026 Celebración de XV Años - Shirel Daniela
-</footer>
+  <!-- DETALLES -->
+  <main>
+    <section id="detalles" class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2 class="section-title">Detalles del evento</h2>
+          <p class="lead">Acompáñanos a celebrar los XV años de <strong>Shirel Daniela</strong> en una noche mágica inspirada en <em>La Bella Durmiente</em>.</p>
+
+          <ul class="list-unstyled fs-6">
+            <li><strong>Fecha:</strong> 30 de mayo de 2026</li>
+            <li><strong>Hora:</strong> Por confirmar</li>
+            <li><strong>Lugar:</strong> (ver mapa abajo)</li>
+          </ul>
+
+          <p class="mt-3">Frase especial: <em>"Que la música y los sueños nos acompañen en esta noche encantada."</em></p>
+
+          <div class="mt-4">
+            <a class="btn btn-neblina me-2" href="mailto:tu-email@ejemplo.com"><i class="bi bi-envelope-fill"></i> Email</a>
+            <!-- REEMPLAZA el número de WhatsApp abajo (formato internacional sin espacios) -->
+            <a class="btn btn-success" href="https://wa.me/5233XXXXXXXX?text=Hola%20Shirel,%20confirmo%20asistencia" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 mt-md-0">
+          <!-- MAPA: reemplaza el src con tu link de Google Maps embed o share -->
+          <div class="map-wrap">
+            <iframe id="mapaFrame"
+              src="https://www.google.com/maps/embed?pb=!1m18!....(REEMPLAZA_POR_TU_EMBED)...."
+              style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <small class="text-muted d-block mt-2">Si el mapa no carga, pega aquí la URL compartida desde Google Maps.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria" class="bg-soft py-5">
+      <div class="container">
+        <h3 class="section-title text-center">Galería</h3>
+        <p class="text-center text-muted mb-4">Imágenes inspiradas en <em>La Bella Durmiente</em>. Reemplaza las URLs con tus imágenes favoritas.</p>
+
+        <div class="row g-3">
+          <!-- Cambia los src por las URLs de las imágenes que quieras -->
+          <div class="col-6 col-md-4">
+            <a class="img-card" href="#">
+              <img src="https://via.placeholder.com/800x600?text=Imagen+1" alt="galeria 1" class="img-fluid rounded shadow-sm">
+            </a>
+          </div>
+          <div class="col-6 col-md-4">
+            <a class="img-card" href="#">
+              <img src="https://via.placeholder.com/800x600?text=Imagen+2" alt="galeria 2" class="img-fluid rounded shadow-sm">
+            </a>
+          </div>
+          <div class="col-6 col-md-4">
+            <a class="img-card" href="#">
+              <img src="https://via.placeholder.com/800x600?text=Imagen+3" alt="galeria 3" class="img-fluid rounded shadow-sm">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÚSICA -->
+    <section class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h4>Lista de reproducción</h4>
+          <p class="text-muted">Reproduce la canción durante la ceremonia (haz clic en reproducir).</p>
+        </div>
+
+        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+          <button id="playBtn" class="btn btn-outline-primary me-2"><i class="bi bi-play-fill"></i> Reproducir</button>
+          <button id="pauseBtn" class="btn btn-outline-secondary"><i class="bi bi-pause-fill"></i> Pausar</button>
+        </div>
+      </div>
+
+      <!-- IFRAME de YouTube (no se auto reproducirá en la mayoría de navegadores sin acción del usuario) -->
+      <div class="mt-3 ratio ratio-16x9">
+        <!-- TU LINK de YouTube: sustituí el id del video -->
+        <iframe id="ytplayer" src="https://www.youtube.com/embed/g0Ocaw8um1g?rel=0&enablejsapi=1"
+          title="Música - Invitación" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- PIE (footer) -->
+    <footer class="footer py-4 bg-gradient">
+      <div class="container text-center">
+        <p class="mb-1">© 2026 • Invitación de Shirel Daniela</p>
+        <small class="text-muted">Invitación generada con ❤️ — súbela a GitHub Pages y comparte el enlace.</small>
+      </div>
+    </footer>
+  </main>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Reproductor YouTube: usa la API postMessage simple para reproducir/pausar (funciona si el iframe lo permite)
+    const player = document.getElementById('ytplayer');
+
+    function postMessageToPlayer(command) {
+      if (!player) return;
+      player.contentWindow.postMessage(JSON.stringify(command), '*');
+    }
+
+    document.getElementById('playBtn').addEventListener('click', () => {
+      postMessageToPlayer({ event: 'command', func: 'playVideo' });
+    });
+
+    document.getElementById('pauseBtn').addEventListener('click', () => {
+      postMessageToPlayer({ event: 'command', func: 'pauseVideo' });
+    });
+
+    // Pequeña mejora UX: esconder el mapa si no se reemplazó el src
+    const mapa = document.getElementById('mapaFrame');
+    if (mapa && mapa.src.indexOf('REEMPLAZA_POR_TU_EMBED') !== -1) {
+      mapa.style.minHeight = '220px';
+      mapa.style.background = 'linear-gradient(90deg, rgba(255,255,255,0.04), rgba(0,0,0,0.02))';
+    }
+  </script>
 
 </body>
 </html>
