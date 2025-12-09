@@ -334,3 +334,36 @@ body {
     outline: 3px solid rgba(110, 168, 247, 0.25);
     border-radius: 12px;
 }
+
+/* ------- GALERÍA / CARRUSEL ------- */
+
+#galeria .carousel-inner {
+    max-width: 500px;
+    /* tamaño máximo del carrusel */
+    margin: 0 auto;
+    /* centrar carrusel */
+    border-radius: 20px;
+    /* bordes redondeados */
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+}
+
+#galeria .carousel-item img {
+    height: 350px;
+    /* altura más pequeña */
+    object-fit: cover;
+    /* recorta bonito */
+    border-radius: 20px;
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    #galeria .carousel-item img {
+        height: 260px;
+        /* más pequeño en celular */
+    }
+
+    #galeria .carousel-inner {
+        max-width: 90%;
+    }
+}
