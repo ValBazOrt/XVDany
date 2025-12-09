@@ -70,9 +70,9 @@
           <p class="mt-3">Frase especial: <em>"Que la música y los sueños nos acompañen en esta noche encantada."</em></p>
 
           <div class="mt-4">
-            <a class="btn btn-neblina me-2" href="mailto:tu-email@ejemplo.com"><i class="bi bi-envelope-fill"></i> Email</a>
+            <a class="btn btn-neblina me-2" href="mailto:vale_baza@hotmail.com"><i class="bi bi-envelope-fill"></i> Email</a>
             <!-- REEMPLAZA el número de WhatsApp abajo (formato internacional sin espacios) -->
-            <a class="btn btn-success" href="https://wa.me/5233XXXXXXXX?text=Hola%20Shirel,%20confirmo%20asistencia" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+            <a class="btn btn-success" href="+527761350407" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
           </div>
         </div>
 
@@ -98,17 +98,17 @@
           <!-- Cambia los src por las URLs de las imágenes que quieras -->
           <div class="col-6 col-md-4">
             <a class="img-card" href="#">
-              <img src="https://via.placeholder.com/800x600?text=Imagen+1" alt="galeria 1" class="img-fluid rounded shadow-sm">
+              <img src="/img/1.png" alt="galeria 1" class="img-fluid rounded shadow-sm">
             </a>
           </div>
           <div class="col-6 col-md-4">
             <a class="img-card" href="#">
-              <img src="https://via.placeholder.com/800x600?text=Imagen+2" alt="galeria 2" class="img-fluid rounded shadow-sm">
+              <img src="/img/3.png" alt="galeria 2" class="img-fluid rounded shadow-sm">
             </a>
           </div>
           <div class="col-6 col-md-4">
             <a class="img-card" href="#">
-              <img src="https://via.placeholder.com/800x600?text=Imagen+3" alt="galeria 3" class="img-fluid rounded shadow-sm">
+              <img src="/img/4.jpeg" alt="galeria 3" class="img-fluid rounded shadow-sm">
             </a>
           </div>
         </div>
@@ -167,7 +167,7 @@
 
     // Pequeña mejora UX: esconder el mapa si no se reemplazó el src
     const mapa = document.getElementById('mapaFrame');
-    if (mapa && mapa.src.indexOf('REEMPLAZA_POR_TU_EMBED') !== -1) {
+    if (mapa && mapa.src.indexOf(<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14979.506537895442!2d-98.0792585!3d20.1808614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d08b13344ec8c9%3A0xfe61716a7b515d0c!2sSal%C3%B3n%20de%20Eventos%20La%20Terraza!5e0!3m2!1ses-419!2smx!4v1765303145205!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>) !== -1) {
       mapa.style.minHeight = '220px';
       mapa.style.background = 'linear-gradient(90deg, rgba(255,255,255,0.04), rgba(0,0,0,0.02))';
     }
