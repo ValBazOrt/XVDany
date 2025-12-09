@@ -23,7 +23,7 @@
 body {
     font-family: "Helvetica Neue", Arial, sans-serif;
     color: #222;
-    background: url("img/castillo.jpeg") no-repeat center center fixed;
+    background: url("img/castillo.png") no-repeat center center fixed;
     background-size: cover;
     position: relative;
     overflow-x: hidden;
