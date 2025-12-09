@@ -68,8 +68,8 @@
         <section id="detalles" class="container py-5">
             <div class="row align-items-center">
                 <!-- Columna izquierda -->
-                <div class="col-md-6">
-                    <h2 class="section-title">Detalles del evento</h2>
+                <div class="class=" alert alert-primary" role="alert"">
+                    <h2 class=" section-title">Detalles del evento</h2>
 
                     <p class="lead">
                         Acompáñanos a celebrar los XV años de <strong>Shirel Daniela</strong> en una noche mágica
@@ -135,65 +135,50 @@
         </section>
 
         <!-- GALERÍA -->
-        <section id="galeria" class="bg-soft py-5">
-            <div id="c4" class="carousel slide carousel-fade mb-5" data-bs-interval="false">
+        <section id="galeria" class="py-5">
+            <h2 class="text-center mb-4 section-title">Galería</h2>
+
+            <div id="carruselElegante" class="carousel slide carousel-fade">
                 <div class="carousel-inner">
 
                     <div class="carousel-item active">
-                        <div class="row align-items-center p-3">
-                            <div class="col-4 col-md-3 text-center">
-                                <img src="img/1.jpeg" class="img-fluid rounded"
-                                    style="height:180px; object-fit:cover;">
-                            </div>
+                        <div class="carrusel-frame">
+                            <img src="img/1.png" alt="">
                         </div>
                     </div>
 
                     <div class="carousel-item">
-                        <div class="row align-items-center p-3">
-                            <div class="col-4 col-md-3 text-center">
-                                <img src="img/1.png" class="img-fluid rounded"
-                                    style="height:180px; object-fit:cover;">
-                            </div>
+                        <div class="carrusel-frame">
+                            <img src="img/2.jpeg" alt="">
                         </div>
                     </div>
 
                     <div class="carousel-item">
-                        <div class="row align-items-center p-3">
-                            <div class="col-4 col-md-3 text-center">
-                                <img src="img/2.jpeg" class="img-fluid rounded"
-                                    style="height:180px; object-fit:cover;">
-                            </div>
+                        <div class="carrusel-frame">
+                            <img src="img/3.png" alt="">
                         </div>
                     </div>
 
                     <div class="carousel-item">
-                        <div class="row align-items-center p-3">
-                            <div class="col-4 col-md-3 text-center">
-                                <img src="img/3.png" class="img-fluid rounded"
-                                    style="height:180px; object-fit:cover;">
-                            </div>
+                        <div class="carrusel-frame">
+                            <img src="img/4.jpeg" alt="">
                         </div>
                     </div>
 
-                    <div class="carousel-item">
-                        <div class="row align-items-center p-3">
-                            <div class="col-4 col-md-3 text-center">
-                                <img src="img/4.jpeg" class="img-fluid rounded"
-                                    style="height:180px; object-fit:cover;">
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#c4" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
+                <!-- Flechas -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselElegante"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon shadow-icon"></span>
                 </button>
-
-                <button class="carousel-control-next" type="button" data-bs-target="#c4" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselElegante"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon shadow-icon"></span>
                 </button>
             </div>
         </section>
+
 
         <!-- MÚSICA (reproductor oculto YouTube) -->
         <div id="yt-player-wrapper" style="display:none;">
@@ -204,7 +189,7 @@
 
         <!-- FOOTER -->
         <footer class="footer py-4 bg-gradient">
-            <div class="container text-center">
+            <div class="alert alert-primary" role="alert">
                 <p class="mb-1">© 2026 • Invitación de Shirel Daniela</p>
                 <small class="text-muted">Invitación generada con ❤️</small>
             </div>
