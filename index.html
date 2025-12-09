@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Invitación XV • Shirel Daniela</title>
 
-    <!-- Bootstrap (solo utilidades y grid) -->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Tu CSS -->
+    <!-- Estilos -->
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-    <!-- WIDGET DE MÚSICA FLOTANTE (Amuleto Azul Neblina) -->
+    <!-- ELEMENTOS MÁGICOS (pétalos + estrellitas + polvo de hadas) -->
+    <div class="magic-container"></div>
+
+    <!-- WIDGET DE MÚSICA FLOTANTE -->
     <div id="music-widget" class="music-widget" aria-label="Control de música de la invitación">
         <div class="amulet">
             <div class="amulet-inner">
@@ -27,23 +30,29 @@
         </div>
 
         <div class="controls">
-            <button id="mw-play" class="mw-btn" title="Reproducir"><i class="bi bi-play-fill"></i></button>
-            <button id="mw-pause" class="mw-btn" title="Pausar"><i class="bi bi-pause-fill"></i></button>
-            <button id="mw-mute" class="mw-btn" title="Silenciar / activar sonido"><i
-                    class="bi bi-volume-mute-fill"></i></button>
+            <button id="mw-play" class="mw-btn"><i class="bi bi-play-fill"></i></button>
+            <button id="mw-pause" class="mw-btn"><i class="bi bi-pause-fill"></i></button>
+            <button id="mw-mute" class="mw-btn"><i class="bi bi-volume-mute-fill"></i></button>
         </div>
     </div>
 
-    <!-- HERO / PORTADA -->
+    <!-- HERO PORTADA -->
     <header class="hero">
         <div class="hero-overlay"></div>
 
         <div class="hero-content container text-center">
-            <div class="logo-crest" aria-hidden="true">👑</div>
-            <h1 class="hero-title">Shirel Daniela<br /><span class="accent">Ruiz Ramírez</span></h1>
+            <div class="logo-crest">👑</div>
+
+            <h1 class="hero-title">Shirel Daniela<br>
+                <span class="accent">Ruiz Ramírez</span>
+            </h1>
+
             <p class="hero-sub">Te invita a celebrar sus<br><strong>XV años</strong></p>
 
-            <p class="quote">"Que la música y los sueños nos acompañen en esta noche encantada."</p>
+            <p class="quote">
+                "Mi estimado(a) invitado(a), seas bienvenido a presenciar cómo una niña se convierte en señorita a
+                través de una ceremonia de la realeza"
+            </p>
 
             <div class="hero-meta mt-3">
                 <div class="d-inline-block me-3">
@@ -52,153 +61,154 @@
                 </div>
             </div>
         </div>
-
-        <!-- pétalos animados -->
-        <div class="petals" aria-hidden="true">
-            <span class="petal"></span><span class="petal"></span><span class="petal"></span>
-            <span class="petal"></span><span class="petal"></span><span class="petal"></span>
-        </div>
     </header>
 
     <!-- DETALLES -->
     <main>
         <section id="detalles" class="container py-5">
             <div class="row align-items-center">
+                <!-- Columna izquierda -->
                 <div class="col-md-6">
                     <h2 class="section-title">Detalles del evento</h2>
-                    <p class="lead">Acompáñanos a celebrar los XV años de <strong>Shirel Daniela</strong> en una noche
-                        mágica inspirada en <em>La Bella Durmiente</em>.</p>
+
+                    <p class="lead">
+                        Acompáñanos a celebrar los XV años de <strong>Shirel Daniela</strong> en una noche mágica
+                        inspirada en
+                        <em>La Bella Durmiente</em>.
+                    </p>
+
+                    <p class="quote">
+                        "Que la música y los sueños nos acompañen en esta noche encantada."
+                    </p>
 
                     <ul class="list-unstyled fs-6">
                         <li><strong>Fecha:</strong> 30 de mayo de 2026</li>
-                        <li><strong>Hora:</strong> 3;00 PM</li>
-                        <li><strong>Lugar:</strong> Salón de Eventos "LA TERRAZA"</li>
+                        <li><strong>Hora:</strong> 3:00 PM</li>
+                        <li><strong>Lugar:</strong> Salón de Eventos “LA TERRAZA”</li>
                     </ul>
 
-                    <p class="mt-3">Frase especial: <em>"Que la música y los sueños nos acompañen en esta noche
-                            encantada."</em></p>
+                    <p class="mt-3"><em>"Que la música y los sueños nos acompañen en esta noche encantada."</em></p>
 
+                    <!-- Botones -->
                     <div class="mt-4">
-                        <a class="btn btn-neblina me-2" href="mailto:vale_baza@hotmail.com"><i
-                                class="bi bi-envelope-fill"></i> Email</a>
-                        <a class="btn btn-success" href="https://wa.me/527761350407" target="_blank" rel="noopener"><i
-                                class="bi bi-whatsapp"></i> WhatsApp</a>
+                        <a class="btn btn-neblina me-2" href="mailto:vale_baza@hotmail.com">
+                            <i class="bi bi-envelope-fill"></i> Email
+                        </a>
+
+                        <a class="btn btn-success" href="https://wa.me/527761350407" target="_blank">
+                            <i class="bi bi-whatsapp"></i> WhatsApp
+                        </a>
                     </div>
 
-                    <div>
-                        <p>PALETA DE COLORES</p>
-                        <p>Algunas recomendaciones para su vestimenta</p>
-                        <font color="red">Color no permitido cualquier tono de AZUL</font>
+                    <!-- Paleta de colores -->
+                    <div class="mt-4">
+                        <p class="fw-bold">PALETA DE COLORES</p>
+                        <p>Algunas recomendaciones para su vestimenta:</p>
+                        <p>
+                            <font color="red"><strong>Color no permitido: cualquier tono de AZUL</strong></font>
+                        </p>
 
-                        <div class="spinner-border" style="color: #F7E7CE;" role="status"> <!-- Champagne -->
-                            <span class="visually-hidden">Champagne</span>
-                        </div>
-
-                        <div class="spinner-border" style="color: #E8C7C8;" role="status"> <!-- Rosa Palo -->
-                            <span class="visually-hidden">Rosa Palo</span>
-                        </div>
-
-                        <div class="spinner-border" style="color: #800020;" role="status"> <!-- Vino -->
-                            <span class="visually-hidden">Vino</span>
-                        </div>
-
-                        <div class="spinner-border" style="color: #D4AF37;" role="status"> <!-- Dorado Suave -->
-                            <span class="visually-hidden">Dorado Suave</span>
-                        </div>
-
-                        <div class="spinner-border" style="color: #E6B7C3;" role="status"> <!-- Oro Rosa -->
-                            <span class="visually-hidden">Oro Rosa</span>
-                        </div>
-
-                        <div class="spinner-border" style="color: #556B2F;" role="status"> <!-- Verde Olivo -->
-                            <span class="visually-hidden">Verde Olivo</span>
-                        </div>
-
-                        <div class="spinner-border" style="color: #FFF8E7;" role="status"> <!-- Marfil -->
-                            <span class="visually-hidden">Marfil</span>
-                        </div>
-
-                        <div class="spinner-border" style="color: #C0C0C0;" role="status"> <!-- Plata -->
-                            <span class="visually-hidden">Plata</span>
-                        </div>
-
-                        <div class="spinner-border" style="color: #2B2B2B;" role="status"> <!-- Negro Carbón -->
-                            <span class="visually-hidden">Negro Carbón</span>
-                        </div>
-
-                        <div class="spinner-border" style="color: #7B5E57;" role="status"> <!-- Café Mocca -->
-                            <span class="visually-hidden">Café Mocca</span>
+                        <div class="d-flex flex-wrap gap-2">
+                            <div class="spinner-border" style="color: #F7E7CE;"></div>
+                            <div class="spinner-border" style="color: #E8C7C8;"></div>
+                            <div class="spinner-border" style="color: #800020;"></div>
+                            <div class="spinner-border" style="color: #D4AF37;"></div>
+                            <div class="spinner-border" style="color: #E6B7C3;"></div>
+                            <div class="spinner-border" style="color: #556B2F;"></div>
+                            <div class="spinner-border" style="color: #FFF8E7;"></div>
+                            <div class="spinner-border" style="color: #C0C0C0;"></div>
+                            <div class="spinner-border" style="color: #2B2B2B;"></div>
+                            <div class="spinner-border" style="color: #7B5E57;"></div>
                         </div>
                     </div>
-
                 </div>
 
+                <!-- Columna derecha -->
                 <div class="col-md-6 mt-4 mt-md-0">
                     <div class="map-wrap">
-                        <!-- iframe de Google Maps (si no carga, usa el link arriba) -->
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14979.506537895442!2d-98.0792585!3d20.1808614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d08b13344ec8c9%3A0xfe61716a7b515d0c!2sSal%C3%B3n%20de%20Eventos%20La%20Terraza!5e0!3m2!1ses-419!2smx!4v1765303859809!5m2!1ses-419!2smx"
-                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <small class="text-muted d-block mt-2">Mapa integrado. Si prefieres, abre la ubicación en Google
-                            Maps: <a href="https://maps.app.goo.gl/sY2FWg6m3bnCsk3w9" target="_blank"
-                                rel="noopener">Abrir en Maps</a></small>
+                            width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- GALERÍA -->
         <section id="galeria" class="bg-soft py-5">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div id="carouselExampleFade" class="carousel slide">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="img/1.png" class="d-block w-100" alt="...">
+                        <img src="img/1.jpeg" class="d-block w-100">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/2.jpeg" class="d-block w-100" alt="...">
+                        <img src="img/1.png" class="d-block w-100">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/3.png" class="d-block w-100" alt="...">
+                        <img src="img/2.jpeg" class="d-block w-100">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/4.jpeg" class="d-block w-100" alt="...">
+                        <img src="img/3.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/4.jpeg" class="d-block w-100">
                     </div>
                 </div>
+
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
                     data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                    <span class="carousel-control-prev-icon"></span>
                 </button>
+
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
                     data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                    <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
         </section>
 
-        <!-- MÚSICA: reproductor oculto de YouTube (solo snippet 00:00-00:28 con loop) -->
+        <!-- MÚSICA (reproductor oculto YouTube) -->
         <div id="yt-player-wrapper" style="display:none;">
-            <!-- el src tiene start=0 end=28 loop mediante playlist, enablejsapi para control -->
             <iframe id="ytplayer"
                 src="https://www.youtube.com/embed/g0Ocaw8um1g?rel=0&enablejsapi=1&controls=0&start=0&end=28&loop=1&playlist=g0Ocaw8um1g&autoplay=1"
                 allow="autoplay; encrypted-media"></iframe>
         </div>
 
-        <!-- PIE (footer) -->
+        <!-- FOOTER -->
         <footer class="footer py-4 bg-gradient">
             <div class="container text-center">
                 <p class="mb-1">© 2026 • Invitación de Shirel Daniela</p>
-                <small class="text-muted">Invitación generada con ❤️ </small>
+                <small class="text-muted">Invitación generada con ❤️</small>
             </div>
         </footer>
     </main>
 
-    <!-- SCRIPTS -->
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SCRIPT DE ESTRELLAS, PÉTALOS Y POLVO DE HADAS -->
     <script>
-        // -----------------------------
-        // Player messaging helper
-        // -----------------------------
+        const magic = document.querySelector(".magic-container");
+
+        function createMagicElement(type) {
+            const el = document.createElement("span");
+            el.classList.add(type);
+
+            el.style.left = Math.random() * 100 + "vw";
+            el.style.animationDuration = (6 + Math.random() * 6) + "s";
+
+            magic.appendChild(el);
+
+            setTimeout(() => el.remove(), 12000);
+        }
+
+        setInterval(() => createMagicElement("star"), 450);
+        setInterval(() => createMagicElement("petal"), 600);
+        setInterval(() => createMagicElement("spark"), 200);
+    </script>
+
+    <!-- SCRIPT DEL CONTROL DE MÚSICA -->
+    <script>
         const player = document.getElementById('ytplayer');
 
         function postMessageToPlayer(command) {
@@ -206,8 +216,6 @@
             player.contentWindow.postMessage(JSON.stringify(command), '*');
         }
 
-        // Inicialmente intentamos autoplay (silenciado)
-        // y proveemos controles en el widget para play/pause/mute.
         const btnPlay = document.getElementById('mw-play');
         const btnPause = document.getElementById('mw-pause');
         const btnMute = document.getElementById('mw-mute');
@@ -215,10 +223,8 @@
         let isMuted = true;
         let isPlaying = false;
 
-        // Play
         btnPlay.addEventListener('click', () => {
             postMessageToPlayer({ event: 'command', func: 'playVideo' });
-            // cuando el usuario toca play, quitamos el mute si estaba
             if (isMuted) {
                 postMessageToPlayer({ event: 'command', func: 'unMute' });
                 isMuted = false;
@@ -227,13 +233,11 @@
             isPlaying = true;
         });
 
-        // Pause
         btnPause.addEventListener('click', () => {
             postMessageToPlayer({ event: 'command', func: 'pauseVideo' });
             isPlaying = false;
         });
 
-        // Mute / unmute
         btnMute.addEventListener('click', () => {
             if (isMuted) {
                 postMessageToPlayer({ event: 'command', func: 'unMute' });
@@ -245,9 +249,7 @@
             isMuted = !isMuted;
         });
 
-        // Al cargar intentaremos iniciar silenciado (algunos navegadores permiten autoplay si está muteado)
         window.addEventListener('load', () => {
-            // Mute & play attempt
             setTimeout(() => {
                 postMessageToPlayer({ event: 'command', func: 'mute' });
                 postMessageToPlayer({ event: 'command', func: 'playVideo' });
@@ -256,53 +258,6 @@
                 btnMute.innerHTML = '<i class="bi bi-volume-mute-fill"></i>';
             }, 800);
         });
-
-        // Mejorar accesibilidad: tecla espacio sobre el widget reproduce/pausa
-        document.getElementById('music-widget').addEventListener('keydown', (e) => {
-            if (e.key === ' ' || e.key === 'Spacebar') {
-                e.preventDefault();
-                if (isPlaying) {
-                    postMessageToPlayer({ event: 'command', func: 'pauseVideo' });
-                    isPlaying = false;
-                } else {
-                    postMessageToPlayer({ event: 'command', func: 'playVideo' });
-                    isPlaying = true;
-                }
-            }
-        });
-
-        // Drag pequeño para mover widget (opcional — solo desplazamiento limitado)
-        (function enableDrag() {
-            const widget = document.getElementById('music-widget');
-            let isDown = false, startX, startY, origX, origY;
-            widget.addEventListener('mousedown', (e) => {
-                isDown = true;
-                startX = e.clientX;
-                startY = e.clientY;
-                const rect = widget.getBoundingClientRect();
-                origX = rect.left;
-                origY = rect.top;
-                widget.classList.add('dragging');
-            });
-            window.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                const dx = e.clientX - startX;
-                const dy = e.clientY - startY;
-                // limitar el movimiento para que siempre esté visible
-                let left = Math.max(8, Math.min(window.innerWidth - widget.offsetWidth - 8, origX + dx));
-                let top = Math.max(8, Math.min(window.innerHeight - widget.offsetHeight - 8, origY + dy));
-                widget.style.left = left + 'px';
-                widget.style.top = top + 'px';
-            });
-            window.addEventListener('mouseup', () => {
-                if (isDown) {
-                    isDown = false;
-                    widget.classList.remove('dragging');
-                }
-            });
-            // permitir focus para accesibilidad
-            widget.tabIndex = 0;
-        })();
     </script>
 
 </body>
