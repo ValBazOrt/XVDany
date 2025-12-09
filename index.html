@@ -209,6 +209,9 @@
 
     <!-- SCRIPT DEL CONTROL DE MÚSICA -->
     <script>
+        // -----------------------------
+        // Player messaging helper
+        // -----------------------------
         const player = document.getElementById('ytplayer');
 
         function postMessageToPlayer(command) {
@@ -216,6 +219,8 @@
             player.contentWindow.postMessage(JSON.stringify(command), '*');
         }
 
+        // Inicialmente intentamos autoplay (silenciado)
+        // y proveemos controles en el widget para play/pause/mute.
         const btnPlay = document.getElementById('mw-play');
         const btnPause = document.getElementById('mw-pause');
         const btnMute = document.getElementById('mw-mute');
@@ -223,8 +228,10 @@
         let isMuted = true;
         let isPlaying = false;
 
+        // Play
         btnPlay.addEventListener('click', () => {
             postMessageToPlayer({ event: 'command', func: 'playVideo' });
+            // cuando el usuario toca play, quitamos el mute si estaba
             if (isMuted) {
                 postMessageToPlayer({ event: 'command', func: 'unMute' });
                 isMuted = false;
@@ -233,11 +240,13 @@
             isPlaying = true;
         });
 
+        // Pause
         btnPause.addEventListener('click', () => {
             postMessageToPlayer({ event: 'command', func: 'pauseVideo' });
             isPlaying = false;
         });
 
+        // Mute / unmute
         btnMute.addEventListener('click', () => {
             if (isMuted) {
                 postMessageToPlayer({ event: 'command', func: 'unMute' });
@@ -249,7 +258,9 @@
             isMuted = !isMuted;
         });
 
+        // Al cargar intentaremos iniciar silenciado (algunos navegadores permiten autoplay si está muteado)
         window.addEventListener('load', () => {
+            // Mute & play attempt
             setTimeout(() => {
                 postMessageToPlayer({ event: 'command', func: 'mute' });
                 postMessageToPlayer({ event: 'command', func: 'playVideo' });
@@ -258,6 +269,53 @@
                 btnMute.innerHTML = '<i class="bi bi-volume-mute-fill"></i>';
             }, 800);
         });
+
+        // Mejorar accesibilidad: tecla espacio sobre el widget reproduce/pausa
+        document.getElementById('music-widget').addEventListener('keydown', (e) => {
+            if (e.key === ' ' || e.key === 'Spacebar') {
+                e.preventDefault();
+                if (isPlaying) {
+                    postMessageToPlayer({ event: 'command', func: 'pauseVideo' });
+                    isPlaying = false;
+                } else {
+                    postMessageToPlayer({ event: 'command', func: 'playVideo' });
+                    isPlaying = true;
+                }
+            }
+        });
+
+        // Drag pequeño para mover widget (opcional — solo desplazamiento limitado)
+        (function enableDrag() {
+            const widget = document.getElementById('music-widget');
+            let isDown = false, startX, startY, origX, origY;
+            widget.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.clientX;
+                startY = e.clientY;
+                const rect = widget.getBoundingClientRect();
+                origX = rect.left;
+                origY = rect.top;
+                widget.classList.add('dragging');
+            });
+            window.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+                // limitar el movimiento para que siempre esté visible
+                let left = Math.max(8, Math.min(window.innerWidth - widget.offsetWidth - 8, origX + dx));
+                let top = Math.max(8, Math.min(window.innerHeight - widget.offsetHeight - 8, origY + dy));
+                widget.style.left = left + 'px';
+                widget.style.top = top + 'px';
+            });
+            window.addEventListener('mouseup', () => {
+                if (isDown) {
+                    isDown = false;
+                    widget.classList.remove('dragging');
+                }
+            });
+            // permitir focus para accesibilidad
+            widget.tabIndex = 0;
+        })();
     </script>
 
 </body>
