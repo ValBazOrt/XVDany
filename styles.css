@@ -279,31 +279,52 @@ body::before {
     background: linear-gradient(180deg, #fdfcff, #eef8ff);
 }
 
-.carousel-item .row {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(4px);
-    border-radius: 12px;
-    padding: 15px;
-    border: 1px solid #2e95d9;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Contenedor del carrusel */
+#galeria .carousel-inner {
+    max-width: 480px;
+    /* Tamaño centrado */
+    margin: 0 auto;
+    border-radius: 18px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(6px);
+    padding: 10px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
 }
 
-.carousel-item .row:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+/* Contenedor de la imagen dentro del item */
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
 }
 
+/* Imágenes centradas y completas */
 .carousel-item img {
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.20);
-    width: 150px;
-    height: 200px;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
+    /* Respeta la altura real */
+    max-height: 480px;
+    /* Evita que sean gigantes */
+    object-fit: contain;
+    /* 🔥 Muestra TODA la imagen */
+    border-radius: 12px;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.25);
 }
 
+/* Móviles */
 @media (max-width: 600px) {
-    .carousel-item img {
-        height: 250px;
+    #galeria .carousel-inner {
+        max-width: 90%;
     }
+
+    .carousel-item img {
+        max-height: 300px;
+        /* Más pequeño en celular */
+    }
+}
+
+.spinner-grow {
+    animation-duration: 3.8s !important;
 }
