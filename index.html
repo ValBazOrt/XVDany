@@ -1,154 +1,280 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>XV Años • Shirel Daniela</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Invitación XV • Shirel Daniela</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap (solo utilidades y grid) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css">
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-<!-- 🔵 AUDIO OCULTO AUTOPLAY 0:00–0:28 🔵 -->
-<audio id="bg-audio" autoplay loop muted>
-  <source src="audio/bella-durmiente.mp3" type="audio/mpeg">
-</audio>
+    <!-- HERO / PORTADA -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
 
-<script>
-const audio = document.getElementById("bg-audio");
+        <div class="hero-content container text-center">
+            <div class="logo-crest" aria-hidden="true">👑</div>
+            <h1 class="hero-title">Shirel Daniela<br /><span class="accent">Ruiz Ramírez</span></h1>
+            <p class="hero-sub">Te invita a celebrar sus<br><strong>XV años</strong></p>
 
-// permitir autoplay en móviles
-audio.volume = 0.5;
-audio.currentTime = 0;
-audio.muted = true;
+            <p class="quote">"Donde comienza el sueño más bonito..."</p>
 
-audio.addEventListener("canplay", () => {
-  audio.play();
-});
+            <div class="hero-meta mt-3">
+                <div class="d-inline-block me-3">
+                    <i class="bi bi-calendar-event"></i>
+                    <strong>30 de mayo de 2026</strong>
+                </div>
 
-// bucle exacto de 0:00 a 0:28
-setInterval(() => {
-  if (audio.currentTime >= 28) audio.currentTime = 0;
-}, 500);
+                <div class="d-inline-block">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <strong><a class="map-link" href="https://maps.app.goo.gl/sY2FWg6m3bnCsk3w9" target="_blank"
+                            rel="noopener">Ver ubicación</a></strong>
+                </div>
+            </div>
 
-// botones de control
-function pausar() { audio.pause(); }
-function reanudar() { 
-  audio.muted = false; 
-  audio.play(); 
-}
-</script>
+            <div class="mt-4">
+                <a class="btn btn-primary btn-lg me-2" href="#detalles">Ver detalles</a>
+                <a class="btn btn-outline-secondary btn-lg" href="#galeria">Galería</a>
+            </div>
+        </div>
 
-<!-- ⭐ HERO ⭐ -->
-<header class="hero">
-  <div class="hero-overlay"></div>
+        <!-- pétalos animados -->
+        <div class="petals" aria-hidden="true">
+            <span class="petal"></span><span class="petal"></span><span class="petal"></span>
+            <span class="petal"></span><span class="petal"></span><span class="petal"></span>
+            <span class="petal"></span><span class="petal"></span><span class="petal"></span>
+        </div>
+    </header>
 
-  <div class="hero-content text-center container">
-    <div class="logo-crest">👑</div>
-    <h1 class="hero-title">Shirel Daniela<br><span class="accent">Ruiz Ramírez</span></h1>
-    <p class="hero-sub">Te invita a celebrar sus<br><strong>XV años</strong></p>
+    <!-- DETALLES -->
+    <main>
+        <section id="detalles" class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="section-title">Detalles del evento</h2>
+                    <p class="lead">Acompáñanos a celebrar los XV años de <strong>Shirel Daniela</strong> en una noche
+                        mágica inspirada en <em>La Bella Durmiente</em>.</p>
 
-    <p class="quote">"Donde comienza el sueño más bonito..."</p>
+                    <ul class="list-unstyled fs-6">
+                        <li><strong>Fecha:</strong> 30 de mayo de 2026</li>
+                        <li><strong>Hora:</strong> Por confirmar</li>
+                        <li><strong>Lugar:</strong> Salón de Eventos — link en "Ver ubicación"</li>
+                    </ul>
 
-    <div class="hero-meta mt-3">
-      <div class="d-inline-block me-3">
-        <i class="bi bi-calendar-event"></i>
-        <strong>30 de mayo de 2026</strong>
-      </div>
-    </div>
+                    <p class="mt-3">Frase especial: <em>"Que la música y los sueños nos acompañen en esta noche
+                            encantada."</em></p>
 
-    <div class="mt-4">
-      <a class="btn btn-primary btn-lg me-2" href="#detalles">Ver detalles</a>
-      <a class="btn btn-outline-light btn-lg" href="#galeria">Galería</a>
-    </div>
-  </div>
+                    <div class="mt-4">
+                        <a class="btn btn-neblina me-2" href="mailto:vale_baza@hotmail.com"><i
+                                class="bi bi-envelope-fill"></i> Email</a>
+                        <a class="btn btn-success" href="https://wa.me/527761350407" target="_blank" rel="noopener"><i
+                                class="bi bi-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
 
-  <!-- pétalos animados -->
-  <div class="petals">
-    <span class="petal"></span><span class="petal"></span><span class="petal"></span>
-    <span class="petal"></span><span class="petal"></span><span class="petal"></span>
-  </div>
-</header>
+                <div class="col-md-6 mt-4 mt-md-0">
+                    <div class="map-wrap">
+                        <!-- iframe de muestra (si no carga usa enlace de arriba) -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14979.506537895442!2d-98.0792585!3d20.1808614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d08b13344ec8c9%3A0xfe61716a7b515d0c!2sSal%C3%B3n%20de%20Eventos%20La%20Terraza!5e0!3m2!1ses-419!2smx!4v1765303859809!5m2!1ses-419!2smx"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-<!-- ⭐ DETALLES ⭐ -->
-<section id="detalles" class="container py-5">
-  <div class="row align-items-center">
-    <div class="col-md-6">
-      <h2 class="section-title">Detalles del evento</h2>
+                        <small class="text-muted d-block mt-2">Si el mapa no funciona en tu dispositivo, abre <a
+                                href="https://maps.app.goo.gl/sY2FWg6m3bnCsk3w9" target="_blank" rel="noopener">este
+                                enlace</a>.</small>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <ul class="fs-5">
-        <li><strong>Fecha:</strong> 30 de mayo de 2026</li>
-        <li><strong>Hora:</strong> Por confirmar</li>
-      </ul>
+        <!-- GALERÍA (Carrusel tipo "mágico") -->
+        <section id="galeria" class="bg-soft py-5">
+            <div class="container">
+                <h3 class="section-title text-center">Galería</h3>
+                <p class="text-center text-muted mb-4">Imágenes inspiradas en <em>La Bella Durmiente</em>. Reemplaza los
+                    `src` por tus imágenes finales.</p>
 
-      <p class="mt-3">
-        Acompáñanos a celebrar una noche mágica inspirada en 
-        <em>La Bella Durmiente</em>.
-      </p>
+                <div id="galeriaCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-center">
+                                <figure class="img-frame">
+                                    <img src="/img/1.png" class="d-block rounded" alt="galeria 1">
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center">
+                                <figure class="img-frame">
+                                    <img src="/img/3.png" class="d-block rounded" alt="galeria 2">
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center">
+                                <figure class="img-frame">
+                                    <img src="/img/4.jpeg" class="d-block rounded" alt="galeria 3">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
 
-      <p class="mt-3 quote-small">
-        "Que la música y los sueños nos acompañen en esta noche encantada."
-      </p>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#galeriaCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#galeriaCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+        </section>
 
-      <div class="mt-4">
-        <button class="btn btn-outline-danger me-2" onclick="reanudar()">
-          <i class="bi bi-volume-up-fill"></i> Activar música
-        </button>
+        <!-- MÚSICA (YouTube IFrame API controlando 0:00 - 0:28) -->
+        <section class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <p class="mb-1"><strong>Tema:</strong> música de fondo (fragmento inicial)</p>
+                    <div class="btn-group" role="group" aria-label="controles de música">
+                        <button id="playBtn" class="btn btn-outline-primary"><i class="bi bi-play-fill"></i>
+                            Reproducir</button>
+                        <button id="pauseBtn" class="btn btn-outline-secondary"><i class="bi bi-pause-fill"></i>
+                            Pausar</button>
+                        <button id="muteBtn" class="btn btn-outline-warning"><i class="bi bi-volume-mute-fill"></i>
+                            Silenciar</button>
+                        <button id="loopToggle" class="btn btn-outline-info" title="Loop 0:00 - 0:28">Loop: ON</button>
+                    </div>
+                    <small class="text-muted d-block mt-2">Presiona reproducir para escuchar (0:00 → 0:28). El
+                        reproductor está oculto visualmente.</small>
+                </div>
+            </div>
 
-        <button class="btn btn-outline-secondary" onclick="pausar()">
-          <i class="bi bi-pause-fill"></i> Pausar
-        </button>
-      </div>
+            <!-- contenedor para el player (invisible) -->
+            <div id="player-container" class="mt-3 visually-hidden">
+                <div id="yt-player"></div>
+            </div>
+        </section>
 
-      <div class="mt-4">
-        <a class="btn btn-primary me-2" href="mailto:vale_baza@hotmail.com">
-          <i class="bi bi-envelope-fill"></i> Email
-        </a>
-        <a class="btn btn-success" href="https://wa.me/527761350407" target="_blank">
-          <i class="bi bi-whatsapp"></i> WhatsApp
-        </a>
-      </div>
-    </div>
+        <!-- PIE (footer) -->
+        <footer class="footer py-4 bg-gradient">
+            <div class="container text-center">
+                <p class="mb-1">© 2026 • Invitación de Shirel Daniela</p>
+                <small class="text-muted">Invitación generada con ❤️ — súbela a GitHub Pages y comparte el
+                    enlace.</small>
+            </div>
+        </footer>
+    </main>
 
-    <div class="col-md-6 mt-4 mt-md-0">
-      <!-- ⭐ MAPA REAL ⭐ -->
-      <iframe class="map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d938.8284128814135!2d-98.050589!3d20.1767794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d08641a3d79023%3A0xd58e8341b2cfb4a%21sSalon%20de%20Eventos%20La%20Terraza!5e0!3m2!1ses!2smx!4v1730000000000"
-        allowfullscreen="" loading="lazy">
-      </iframe>
-    </div>
-  </div>
-</section>
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- ⭐ GALERÍA ⭐ -->
-<section id="galeria" class="bg-soft py-5">
-  <div class="container">
-    <h3 class="section-title text-center">Galería</h3>
+    <!-- YouTube IFrame API -->
+    <script>
+        // 1) cargar API
+        let tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        document.head.appendChild(tag);
 
-    <div class="row g-3 mt-3">
-      <div class="col-6 col-md-4">
-        <img src="img/1.png" class="img-fluid rounded shadow">
-      </div>
-      <div class="col-6 col-md-4">
-        <img src="img/3.png" class="img-fluid rounded shadow">
-      </div>
-      <div class="col-6 col-md-4">
-        <img src="img/4.jpeg" class="img-fluid rounded shadow">
-      </div>
-    </div>
-  </div>
-</section>
+        // 2) variables
+        let player;
+        const VIDEO_ID = 'g0Ocaw8um1g'; // tu link
+        const SEG_END = 28; // segundos (0:28)
+        let loopEnabled = true;
 
-<!-- ⭐ FOOTER ⭐ -->
-<footer class="footer text-center py-4">
-  © 2026 • Invitación de Shirel Daniela  
-  <br>
-  <small>Hecha con amor ✨</small>
-</footer>
+        // 3) función llamada por la API
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('yt-player', {
+                height: '0',
+                width: '0',
+                videoId: VIDEO_ID,
+                playerVars: {
+                    autoplay: 0,
+                    controls: 0,
+                    disablekb: 1,
+                    modestbranding: 1,
+                    rel: 0,
+                    start: 0
+                },
+                events: {
+                    onReady: onPlayerReady,
+                    onStateChange: onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady() {
+            // listo
+        }
+
+        function onPlayerStateChange(e) {
+            // si se está reproduciendo, crear comprobador para loop 0..SEG_END
+            if (e.data === YT.PlayerState.PLAYING) {
+                ensureLoopChecker();
+            }
+        }
+
+        // checker que regresa al inicio cuando llega a SEG_END
+        let loopCheckerInterval = null;
+        function ensureLoopChecker() {
+            if (loopCheckerInterval) clearInterval(loopCheckerInterval);
+            loopCheckerInterval = setInterval(() => {
+                if (!player || typeof player.getCurrentTime !== 'function') return;
+                const t = player.getCurrentTime();
+                if (loopEnabled && t >= SEG_END - 0.1) {
+                    player.seekTo(0, true);
+                } else if (!loopEnabled && t >= SEG_END - 0.1) {
+                    player.pauseVideo();
+                    player.seekTo(0, true);
+                }
+            }, 250);
+        }
+
+        // controles UI
+        document.addEventListener('click', (ev) => {
+            if (!ev.target) return;
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('playBtn').addEventListener('click', () => {
+                if (!player) return alert('El reproductor aún se está inicializando. Intenta de nuevo en 1s.');
+                player.playVideo();
+                player.unMute();
+            });
+            document.getElementById('pauseBtn').addEventListener('click', () => {
+                if (!player) return;
+                player.pauseVideo();
+            });
+            document.getElementById('muteBtn').addEventListener('click', () => {
+                if (!player) return;
+                if (player.isMuted()) {
+                    player.unMute();
+                    document.getElementById('muteBtn').innerHTML = '<i class="bi bi-volume-up-fill"></i> Sonar';
+                } else {
+                    player.mute();
+                    document.getElementById('muteBtn').innerHTML = '<i class="bi bi-volume-mute-fill"></i> Silenciar';
+                }
+            });
+            document.getElementById('loopToggle').addEventListener('click', (e) => {
+                loopEnabled = !loopEnabled;
+                e.currentTarget.textContent = 'Loop: ' + (loopEnabled ? 'ON' : 'OFF');
+            });
+        });
+    </script>
 
 </body>
+
 </html>
