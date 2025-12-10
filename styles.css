@@ -223,17 +223,18 @@ body::before {
    ============================ */
 .music-widget {
     position: fixed;
-    right: 18px;
-    top: 18px;
+    right: 10px;
+    top: 10px;
     z-index: 9999;
-    width: 100px;
+    width: 130px;
+    height: 110px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 5px;
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(8px);
-    padding: 12px;
+    padding: 8px;
     border-radius: 20px;
     border: 2px solid rgba(255, 192, 203, 0.7);
     box-shadow: 0 0 15px rgba(255, 182, 193, 0.4);
@@ -249,8 +250,8 @@ body::before {
 
 /* Amuleto central opcional (si quieres mantenerlo) */
 .amulet {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.6), rgba(255, 182, 193, 0.2)),
         linear-gradient(135deg, #f8c8dc 0%, #d6a0f0 100%);
@@ -267,7 +268,7 @@ body::before {
     display: flex;
     justify-content: space-between;
     gap: 6px;
-    width: 100%;
+    width: 80%;
 }
 
 .controls .mw-btn {
@@ -460,7 +461,7 @@ body::before {
     backdrop-filter: blur(6px);
     /* Efecto cristal */
     border-radius: 20px;
-    padding: 40px;
+    padding: 30px;
     border: 1px solid rgba(255, 255, 255, 0.6);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
@@ -468,7 +469,7 @@ body::before {
 /* Título estilo princesa */
 #detalles .section-title {
     font-family: "Great Vibes", cursive;
-    font-size: 56px;
+    font-size: 45px;
     color: #000a68;
     /* Dorado suave */
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
@@ -478,7 +479,7 @@ body::before {
 #detalles p,
 #detalles li {
     font-family: "Playfair Display";
-    font-size: 35px;
+    font-size: 26px;
     color: #000000;
     line-height: 1.6;
 }
@@ -486,7 +487,7 @@ body::before {
 /* Frases especiales */
 #detalles .quote {
     font-family: "Cormorant Garamond";
-    font-size: 40px;
+    font-size: 31px;
     color: #3417da;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -495,13 +496,13 @@ body::before {
 #detalles strong {
     color: #000a68;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 33px;
 }
 
 /* Paleta de colores */
 #detalles .spinner-grow {
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
     animation-duration: 10s !important;
     /* más lento */
 }
