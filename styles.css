@@ -409,3 +409,45 @@ body::before {
     animation-duration: 4.2s !important;
     /* más lento */
 }
+
+.text-3d-xv {
+    font-family: 'Georgia', serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: #6ea8f7; /* azul neblina sólido */
+
+    /* Contorno dorado elegante */
+    -webkit-text-stroke: 2px #d4af37; /* dorado */
+    text-wrap-style: 2px #d4af37;
+
+    /* Efecto 3D mediante sombras */
+    text-shadow:
+        2px 2px 0 #c89f2f,
+        4px 4px 0 #b48b29,
+        6px 6px 5px rgba(0, 0, 0, 0.25);
+
+    letter-spacing: 1px;
+    display: inline-block;
+
+    /* Brillito sutil */
+    position: relative;
+}
+
+.text-3d-xv::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent 70%);
+    pointer-events: none;
+    animation: shimmer 4s infinite ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes shimmer {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
