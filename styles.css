@@ -150,9 +150,11 @@ body::before {
 }
 
 .hero-title {
-    font-family: "Georgia", serif;
-    font-size: 48px;
-    color: var(--azul-oscuro);
+    font-family: "Great Vibes", serif ;
+    font-size: 56px;
+    font-weight: bolder;
+    color: #000a68;
+    text-shadow: #000a68;
 }
 
 .hero-title .accent {
