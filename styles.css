@@ -571,3 +571,19 @@ body::before {
     }
 
 }
+
+/* Estilo para el pie de página o textos específicos */
+p.mb-1,
+small.text-muted {
+    color: #ffffff;
+    /* Texto blanco */
+    font-family: 'Roboto', sans-serif;
+    /* Fuente Roboto */
+    margin: 0;
+    /* Opcional, ajusta margen */
+}
+
+small.text-muted {
+    opacity: 0.8;
+    /* Si quieres un efecto más suave */
+}
