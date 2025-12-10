@@ -141,12 +141,12 @@ body::before {
     margin: 0 auto;
     padding: 30px;
     border-radius: 18px;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.174);
     box-shadow: 0 10px 40px rgba(60, 80, 120, 0.1);
 }
 
 .logo-crest {
-    font-size: 48px;
+    font-size: 60px;
 }
 
 .hero-title {
@@ -158,6 +158,11 @@ body::before {
 .hero-title .accent {
     color: var(--azul-neblina);
     font-size: 36px;
+    font-weight: bold;
+}
+
+.quote {
+    font-size: 20px; /* Ajusta el tamaño a tu gusto */
     font-weight: bold;
 }
 
@@ -450,7 +455,7 @@ body::before {
 
 /* Caja elegante para la sección de detalles */
 #detalles {
-    background: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.174);
     /* Blanco translúcido */
     backdrop-filter: blur(6px);
     /* Efecto cristal */
@@ -503,7 +508,7 @@ body::before {
 
 .text-3d-xv {
     font-family: 'Georgia', serif;
-    font-size: 42px;
+    font-size: 60px;
     font-weight: 900;
     color: #6ea8f7;
     /* azul neblina sólido */
