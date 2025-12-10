@@ -382,7 +382,7 @@ body::before {
 #detalles p,
 #detalles li {
     font-family: "Parisienne", cursive;
-    font-size: 22px;
+    font-size: 40px;
     color: #4a3b2f;
     line-height: 1.6;
 }
@@ -390,7 +390,7 @@ body::before {
 /* Frases especiales */
 #detalles .quote {
     font-family: "Great Vibes", cursive;
-    font-size: 32px;
+    font-size: 50px;
     color: #b8860b;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -399,13 +399,13 @@ body::before {
 #detalles strong {
     color: #8b6b3f;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 40px;
 }
 
 /* Paleta de colores */
 #detalles .spinner-grow {
     width: 35px;
     height: 35px;
-    animation-duration: 2.2s !important;
+    animation-duration: 1.8s !important;
     /* más lento */
 }
