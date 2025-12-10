@@ -356,3 +356,56 @@ body::before {
 .spinner-grow {
     animation-duration: 3.8s !important;
 }
+
+/* Caja elegante para la sección de detalles */
+#detalles {
+    background: rgba(255, 255, 255, 0.55);
+    /* Blanco translúcido */
+    backdrop-filter: blur(6px);
+    /* Efecto cristal */
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Título estilo princesa */
+#detalles .section-title {
+    font-family: "Great Vibes", cursive;
+    font-size: 56px;
+    color: #d4af37;
+    /* Dorado suave */
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Texto principal elegante */
+#detalles p,
+#detalles li {
+    font-family: "Parisienne", cursive;
+    font-size: 22px;
+    color: #4a3b2f;
+    line-height: 1.6;
+}
+
+/* Frases especiales */
+#detalles .quote {
+    font-family: "Great Vibes", cursive;
+    font-size: 32px;
+    color: #b8860b;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Labels como “Fecha”, “Hora”, etc */
+#detalles strong {
+    color: #8b6b3f;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* Paleta de colores */
+#detalles .spinner-grow {
+    width: 35px;
+    height: 35px;
+    animation-duration: 2.2s !important;
+    /* más lento */
+}
