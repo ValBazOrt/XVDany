@@ -371,7 +371,7 @@ body::before {
 
 /* Título estilo princesa */
 #detalles .section-title {
-    font-family: "Great Vibes";
+    font-family: "Great Vibes", cursive;
     font-size: 56px;
     color: #000a68;
     /* Dorado suave */
@@ -389,7 +389,7 @@ body::before {
 
 /* Frases especiales */
 #detalles .quote {
-    font-family: "Great Vibes", cursive;
+    font-family: "Great Vibes";
     font-size: 40px;
     color: #3417da;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -408,5 +408,4 @@ body::before {
     height: 35px;
     animation-duration: 1s !important;
     /* más lento */
-
 }
