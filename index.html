@@ -23,16 +23,24 @@
     <!-- ELEMENTOS MÁGICOS (pétalos + estrellitas + polvo de hadas) -->
     <div class="magic-container"></div>
 
-    <!-- WIDGET DE MÚSICA FLOTANTE -->
-    <div id="music-widget" class="music-widget" aria-label="Control de música de la invitación">
-        <!-- Amuleto central (opcional, decorativo) -->
+    <!-- Widget flotante -->
+    <div id="music-widget" class="music-widget" aria-label="Control de música de la invitación"
+        style="position:fixed; top:20px; right:20px; z-index:1000;">
+
+        <!-- Texto encima del widget -->
+        <div
+            style="text-align:center; margin-bottom:3px; font-family: 'Staatliches', sans-serif; color:#493b02;">
+            Reproducir Melodía
+        </div>
+
+        <!-- Amuleto central -->
         <div class="amulet">
             <div class="amulet-inner">
                 <i id="mw-icon" class="bi bi-music-note-beamed"></i>
             </div>
         </div>
 
-        <!-- Botones juntos abajo -->
+        <!-- Botones de control -->
         <div class="controls">
             <button id="mw-play" class="mw-btn"><i class="bi bi-play-fill"></i></button>
             <button id="mw-pause" class="mw-btn"><i class="bi bi-pause-fill"></i></button>
@@ -284,6 +292,7 @@
 
         let isMuted = false;
 
+        // Funciones de control
         btnPlay.addEventListener('click', () => audio.play());
         btnPause.addEventListener('click', () => audio.pause());
         btnMute.addEventListener('click', () => {
@@ -294,13 +303,55 @@
                 : '<i class="bi bi-volume-up-fill"></i>';
         });
 
-        // Opcional: reproducir silenciado al cargar
+        // Intentar reproducir automáticamente al cargar
         window.addEventListener('load', () => {
-            audio.muted = true;
-            audio.play().catch(() => { });
+            audio.muted = true; // necesario en algunos navegadores para autoplay
+            audio.play().then(() => {
+                // Si se reproduce correctamente, quitamos mute para que se escuche
+                audio.muted = false;
+                isMuted = false;
+                btnMute.innerHTML = '<i class="bi bi-volume-up-fill"></i>';
+            }).catch(() => {
+                // Si el navegador bloquea autoplay con sonido, permanece silenciado hasta que el usuario toque play
+                console.log("Autoplay bloqueado, el usuario deberá iniciar el audio");
+            });
         });
-    </script>
 
+        // Hacer el widget movible
+        (function enableDrag() {
+            const widget = document.getElementById('music-widget');
+            let isDown = false, startX, startY, origX, origY;
+
+            widget.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.clientX;
+                startY = e.clientY;
+                const rect = widget.getBoundingClientRect();
+                origX = rect.left;
+                origY = rect.top;
+                widget.classList.add('dragging');
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+                let left = Math.max(0, Math.min(window.innerWidth - widget.offsetWidth, origX + dx));
+                let top = Math.max(0, Math.min(window.innerHeight - widget.offsetHeight, origY + dy));
+                widget.style.left = left + 'px';
+                widget.style.top = top + 'px';
+            });
+
+            window.addEventListener('mouseup', () => {
+                if (isDown) {
+                    isDown = false;
+                    widget.classList.remove('dragging');
+                }
+            });
+
+            widget.tabIndex = 0;
+        })();
+    </script>
 
     <script>
         function getFormData() {
