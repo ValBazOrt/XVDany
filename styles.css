@@ -281,10 +281,12 @@ body::before {
 
 /* ============================
    CARRUSEL ELEGANTE PREMIUM
+   CON PERGAMINO + GLITTER + TÍTULOS PRINCESA
    ============================ */
 
 #galeria {
     position: relative;
+    padding-top: 30px;
 }
 
 .carrusel-frame {
@@ -294,52 +296,66 @@ body::before {
     border-radius: 20px;
     overflow: hidden;
 
-    /* Marco dorado premium */
-    border: 3px solid rgba(255, 215, 100, 0.65);
+    /* Marco dorado con brillo */
+    border: 3px solid rgba(255, 215, 100, 0.8);
     box-shadow:
-        0 0 18px rgba(255, 215, 100, 0.35),
-        0 0 35px rgba(255, 240, 180, 0.25);
+        0 0 18px rgba(255, 215, 100, 0.55),
+        0 0 35px rgba(255, 240, 180, 0.35),
+        0 0 6px rgba(255, 200, 100, 0.85) inset;
+
+    /* Efecto glitter animado */
+    animation: brilloDorado 2.8s linear infinite;
 }
 
+@keyframes brilloDorado {
+    0% { box-shadow: 0 0 18px rgba(255, 215, 100, 0.55),
+                     0 0 35px rgba(255, 240, 180, 0.35),
+                     0 0 6px rgba(255, 200, 100, 0.85) inset; }
+    50% { box-shadow: 0 0 26px rgba(255, 235, 150, 0.8),
+                      0 0 45px rgba(255, 255, 200, 0.4),
+                      0 0 10px rgba(255, 230, 140, 0.95) inset; }
+    100% { box-shadow: 0 0 18px rgba(255, 215, 100, 0.55),
+                      0 0 35px rgba(255, 240, 180, 0.35),
+                      0 0 6px rgba(255, 200, 100, 0.85) inset; }
+}
+
+/* Imagen CON PERGAMINO DE FONDO */
 .carrusel-frame img {
     width: 100%;
     height: 420px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
-
-    /* Animación de zoom suave */
-    animation: zoomSuave 9s ease-in-out infinite;
+    background: url("img/pergamino.png"), rgba(255, 249, 235, 0.85);
+    background-size: cover;
+    background-position: center;
     border-radius: 16px;
 }
 
-/* Transición fade suave */
+/* Títulos princesa */
+.carousel-caption {
+    bottom: 20px;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(6px);
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 215, 100, 0.6);
+
+    font-family: "Gwendolyn", "Great Vibes", serif;
+    font-size: 28px;
+    color: #d3a84f;
+    text-shadow: 0 0 6px rgba(0,0,0,0.7);
+}
+
+/* Fade más elegante */
 .carousel-fade .carousel-item {
-    transition: opacity 1.3s ease-in-out;
+    transition: opacity 1.5s ease-in-out;
 }
 
-/* Flechas con brillo */
-.shadow-icon {
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
-}
-
+/* Flechas */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
     background-size: 75%;
-}
-
-/* Efecto de zoom suave */
-@keyframes zoomSuave {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.06);
-    }
-
-    100% {
-        transform: scale(1);
-    }
 }
 
 /* Móvil */
@@ -347,14 +363,14 @@ body::before {
     .carrusel-frame img {
         height: 300px;
     }
-
-    .carrusel-frame {
-        max-width: 90%;
+    .carousel-caption {
+        font-size: 20px;
+        padding: 6px 16px;
     }
 }
 
 .spinner-grow {
-    animation-duration: 3.8s !important;
+    animation-duration: 20s !important;
 }
 
 /* Caja elegante para la sección de detalles */
@@ -414,10 +430,12 @@ body::before {
     font-family: 'Georgia', serif;
     font-size: 42px;
     font-weight: 900;
-    color: #6ea8f7; /* azul neblina sólido */
+    color: #6ea8f7;
+    /* azul neblina sólido */
 
     /* Contorno dorado elegante */
-    -webkit-text-stroke: 2px #d4af37; /* dorado */
+    -webkit-text-stroke: 2px #d4af37;
+    /* dorado */
     text-wrap-style: 2px #d4af37;
 
     /* Efecto 3D mediante sombras */
@@ -447,7 +465,15 @@ body::before {
 }
 
 @keyframes shimmer {
-    0% { opacity: 0.6; }
-    50% { opacity: 1; }
-    100% { opacity: 0.6; }
+    0% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
 }
