@@ -381,7 +381,7 @@ body::before {
 /* Texto principal elegante */
 #detalles p,
 #detalles li {
-    font-family: "Parisienne";
+    font-family: "Playfair Display";
     font-size: 35px;
     color: #000000;
     line-height: 1.6;
@@ -389,7 +389,7 @@ body::before {
 
 /* Frases especiales */
 #detalles .quote {
-    font-family: "Great Vibes";
+    font-family: "Cormorant Garamond";
     font-size: 40px;
     color: #3417da;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);

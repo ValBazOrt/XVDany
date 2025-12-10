@@ -89,7 +89,8 @@
                         <p>CÓDIGO DE VESTIMENTA</p>
                         <p>Algunas recomendaciones para su vestimenta:</p>
                         <p>
-                            <font color="blue"><strong>“Para que nuestra princesa brille en esta noche mágica, agradecemos evitar el color azul en su vestuario.”</strong></font>
+                            <font color="blue"><strong>“Para que nuestra princesa brille en esta noche mágica,
+                                    agradecemos evitar el color azul en su vestuario.”</strong></font>
                         </p>
 
                         <div class="d-flex flex-wrap gap-2">
@@ -126,16 +127,37 @@
                             width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
                     </div>
 
-                    <!-- Botones -->
-                    <div class="mt-4">
-                        <a class="btn btn-neblina me-2" href="mailto:vale_baza@hotmail.com">
-                            <i class="bi bi-envelope-fill"></i> Email
-                        </a>
+                    <div class="card p-3 mt-4 bg-light shadow-sm" style="border-radius: 12px;">
+                        <h4 class="mb-3 text-center">Confirmar asistencia</h4>
 
-                        <a class="btn btn-success" href="https://wa.me/527761350407" target="_blank">
-                            <i class="bi bi-whatsapp"></i> WhatsApp
-                        </a>
+                        <div class="mb-3">
+                            <label class="form-label">Nombre completo:</label>
+                            <input id="inv-name" type="text" class="form-control"
+                                placeholder="Escribe tu nombre completo">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Número telefónico:</label>
+                            <input id="inv-phone" type="tel" class="form-control" placeholder="Ej. 7761350407">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Número de acompañantes:</label>
+                            <input id="inv-guests" type="number" min="0" class="form-control" placeholder="Ej. 2">
+                        </div>
+
+                        <!-- Botones -->
+                        <div class="d-flex gap-2 mt-3 justify-content-center">
+                            <button onclick="sendWhatsApp()" class="btn btn-success">
+                                <i class="bi bi-whatsapp"></i> Enviar por WhatsApp
+                            </button>
+
+                            <button onclick="sendEmail()" class="btn btn-primary">
+                                <i class="bi bi-envelope-fill"></i> Enviar por Email
+                            </button>
+                        </div>
                     </div>
+
                 </div>
 
             </div>
@@ -144,9 +166,9 @@
 
         <!-- GALERÍA -->
         <section id="galeria" class="py-5">
-            <h2 class="text-center mb-4 section-title">Galería</h2>
 
             <div id="carruselElegante" class="carousel slide carousel-fade">
+                <h2 class="text-center mb-4 section-title">Galería</h2>
                 <div class="carousel-inner">
 
                     <div class="carousel-item active">
@@ -336,6 +358,42 @@
             // permitir focus para accesibilidad
             widget.tabIndex = 0;
         })();
+    </script>
+    <script>
+        function getFormData() {
+            const nombre = document.getElementById("inv-name").value.trim();
+            const telefono = document.getElementById("inv-phone").value.trim();
+            const acompanantes = document.getElementById("inv-guests").value.trim();
+
+            return { nombre, telefono, acompanantes };
+        }
+
+        function sendWhatsApp() {
+            const { nombre, telefono, acompanantes } = getFormData();
+
+            const mensaje = `Hola, confirmo mi asistencia a los XV de Shirel Daniela:%0A
+• Nombre: ${nombre}%0A
+• Teléfono: ${telefono}%0A
+• Acompañantes: ${acompanantes}`;
+
+            const numero = "527761350407"; // <- TU NÚMERO DE WHATSAPP
+
+            window.open(`https://wa.me/${numero}?text=${mensaje}`, "_blank");
+        }
+
+        function sendEmail() {
+            const { nombre, telefono, acompanantes } = getFormData();
+
+            const subject = "Confirmación de asistencia - Invitado";
+            const body = `Hola, confirmo mi asistencia:%0A
+Nombre: ${nombre}%0A
+Teléfono: ${telefono}%0A
+Acompañantes: ${acompanantes}`;
+
+            const email = "vale_baza@hotmail.com"; // <- TU CORREO
+
+            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+        }
     </script>
 
 </body>
