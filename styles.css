@@ -399,7 +399,7 @@ body::before {
 }
 
 .carrusel-frame img {
-    width: 80%;
+    width: 70%;
     /* Ajusta el tamaño de la imagen */
     height: auto;
     /* Mantener proporción */
@@ -425,8 +425,8 @@ body::before {
     text-align: center;
 
     /* Tipografía elegante y visible */
-    font-family: "Gwendolyn", "Great Vibes", serif;
-    font-size: 34px;
+    font-family: "Gwendolyn";
+    font-size: 36px;
 
     /* Relleno blanco y contorno azul */
     color: #ffffff;
