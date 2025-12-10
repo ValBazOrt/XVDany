@@ -214,7 +214,7 @@ body::before {
 }
 
 /* ============================
-   WIDGET DE MÚSICA - ESTILO PRINCESA
+   WIDGET DE MÚSICA - ESTILO PRINCESA CON ICONO
    ============================ */
 .music-widget {
     position: fixed;
@@ -222,22 +222,30 @@ body::before {
     top: 18px;
     z-index: 9999;
     width: 100px;
-    height: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    transform: translateZ(0);
-    transition: transform .2s ease;
-    cursor: grab;
-    user-select: none;
-    /* Agregamos sombra mágica */
-    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.5), 0 0 15px rgba(255, 192, 203, 0.3);
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    padding: 12px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 192, 203, 0.7);
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.4);
 }
 
+/* Icono de música arriba */
+.music-widget .music-icon {
+    font-size: 36px;
+    color: #ffb6c1;
+    text-shadow: 0 0 8px rgba(255, 182, 193, 0.6);
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Amuleto central opcional (si quieres mantenerlo) */
 .amulet {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.6), rgba(255, 182, 193, 0.2)),
         linear-gradient(135deg, #f8c8dc 0%, #d6a0f0 100%);
@@ -245,11 +253,37 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0 12px rgba(255, 192, 203, 0.5);
     animation: bob 4s ease-in-out infinite;
-    /* Agregamos un brillo sutil */
-    box-shadow: 0 0 10px rgba(255, 223, 186, 0.7), 0 0 25px rgba(255, 192, 203, 0.5);
 }
 
+/* Botones juntos abajo */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+    width: 100%;
+}
+
+.controls .mw-btn {
+    flex: 1;
+    background: #fff0f8;
+    border-radius: 12px;
+    padding: 6px 0;
+    border: 2px solid #ffb6c1;
+    color: #c080e8;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 3px 8px rgba(255, 182, 193, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.controls .mw-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.7);
+}
+
+/* Animación flotante */
 @keyframes bob {
     0% {
         transform: translateY(0) rotate(0deg);
@@ -272,27 +306,24 @@ body::before {
     }
 }
 
-.controls .mw-btn {
-    background: #fff0f8;
-    border-radius: 12px;
-    padding: 6px 10px;
-    border: 2px solid #ffb6c1;
-    color: #c080e8;
-    font-weight: bold;
-    box-shadow: 0 3px 8px rgba(255, 182, 193, 0.5);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
 
-.controls .mw-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.7);
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 #ytplayer {
     width: 0;
     height: 0;
 }
-
 
 /* ============================
    FOOTER
