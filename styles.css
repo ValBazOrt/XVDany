@@ -370,7 +370,7 @@ body::before {
 }
 
 .spinner-grow {
-    animation-duration: 20s !important;
+    animation-duration: 10s !important;
 }
 
 /* Caja elegante para la sección de detalles */
@@ -422,7 +422,7 @@ body::before {
 #detalles .spinner-grow {
     width: 35px;
     height: 35px;
-    animation-duration: 20s !important;
+    animation-duration: 10s !important;
     /* más lento */
 }
 
