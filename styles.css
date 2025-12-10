@@ -334,7 +334,6 @@ body::before {
 
 /* ============================
    CARRUSEL ELEGANTE PREMIUM
-   CON PERGAMINO + GLITTER + TÍTULOS PRINCESA
    ============================ */
 
 #galeria {
@@ -343,25 +342,64 @@ body::before {
     background: transparent !important;
 }
 
+/* Contenedor de la imagen */
 .carrusel-frame {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 15px;
+    /* separa la imagen del texto */
     border-radius: 20px;
     overflow: hidden;
     background: transparent !important;
+    /* quitamos el pergamino de la imagen */
 
-    /* Marco dorado con brillo */
+    /* Marco dorado con brillo opcional */
     border: 3px solid rgba(255, 215, 100, 0.8);
     box-shadow:
         0 0 18px rgba(255, 215, 100, 0.55),
         0 0 35px rgba(255, 240, 180, 0.35),
         0 0 6px rgba(255, 200, 100, 0.85) inset;
 
-    /* Efecto glitter animado */
     animation: brilloDorado 2.8s linear infinite;
+
+    display: flex;
+    justify-content: center;
+    /* centrar horizontalmente la imagen */
+    align-items: center;
+    /* centrar verticalmente */
+    height: 420px;
+    /* altura de la imagen */
 }
 
+.carrusel-frame img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    /* que ocupe todo el contenedor sin deformar */
+    border-radius: 16px;
+    display: block;
+}
+
+/* Títulos princesa con pergamino horizontal */
+.carousel-caption {
+    background: url("img/pergamino.png") no-repeat center/cover, rgba(255, 249, 235, 0.85);
+    padding: 2px 10px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 215, 100, 0.6);
+    text-align: center;
+    font-family: "Sofia", cursive;
+    font-size: 19px;
+    color: #ffffff;
+    -webkit-text-stroke: 2px #1e3aa8;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    margin: 10px auto 5px;
+    /* separación entre la imagen y el texto y siguiente slide */
+    background-size: 100% 100%;
+    /* pergamino horizontal */
+}
+
+/* Animación de brillo del marco */
 @keyframes brilloDorado {
     0% {
         box-shadow: 0 0 18px rgba(255, 215, 100, 0.55),
@@ -382,63 +420,7 @@ body::before {
     }
 }
 
-/* Imagen CON PERGAMINO DE FONDO */
-.carrusel-frame {
-    display: flex;
-    justify-content: center;
-    /* Centrado horizontal */
-    align-items: center;
-    /* Centrado vertical */
-    height: 420px;
-    /* Altura del carrusel */
-    background: url("img/pergamino.png") rgba(255, 249, 235, 0.85);
-    background-size: cover;
-    background-position: center;
-    border-radius: 16px;
-    overflow: hidden;
-}
-
-.carrusel-frame img {
-    width: 70%;
-    /* Ajusta el tamaño de la imagen */
-    height: auto;
-    /* Mantener proporción */
-    object-fit: contain;
-    /* No recorta la imagen */
-    object-position: center;
-    /* Centrar la imagen */
-    border-radius: 16px;
-    display: block;
-    /* Evita espacios extra */
-    margin: 0 auto;
-    /* Centrado horizontal adicional */
-}
-
-/* Títulos princesa */
-.carousel-caption {
-    bottom: 20px;
-    background: rgba(255, 255, 255, 0.032);
-    backdrop-filter: blur(6px);
-    padding: 10px 20px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 215, 100, 0.6);
-    text-align: center;
-
-    /* Tipografía elegante y visible */
-    font-family: "Bitcount Grid Double";
-    font-size: 20px;
-
-    /* Relleno blanco y contorno azul */
-    color: #ffffff;
-    -webkit-text-stroke: 2px #ffffff;
-    /* contorno azul */
-
-    /* Sombra sutil para mayor legibilidad */
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-}
-
-
-/* Fade más elegante */
+/* Fade elegante */
 .carousel-fade .carousel-item {
     transition: opacity 1.5s ease-in-out;
 }
@@ -450,9 +432,9 @@ body::before {
     background-size: 75%;
 }
 
-/* Móvil */
+/* Responsive móvil */
 @media (max-width: 600px) {
-    .carrusel-frame img {
+    .carrusel-frame {
         height: 300px;
     }
 
