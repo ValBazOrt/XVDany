@@ -214,63 +214,85 @@ body::before {
 }
 
 /* ============================
-   WIDGET DE MÚSICA
+   WIDGET DE MÚSICA - ESTILO PRINCESA
    ============================ */
 .music-widget {
     position: fixed;
     right: 18px;
     top: 18px;
     z-index: 9999;
-    width: 90px;
-    height: 110px;
+    width: 100px;
+    height: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     transform: translateZ(0);
-    transition: transform .18s ease;
+    transition: transform .2s ease;
     cursor: grab;
     user-select: none;
+    /* Agregamos sombra mágica */
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.5), 0 0 15px rgba(255, 192, 203, 0.3);
 }
 
 .amulet {
-    width: 84px;
-    height: 84px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
-    background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.1)),
-        linear-gradient(180deg, rgba(110, 168, 247, 0.95), rgba(90, 150, 230, 0.9));
-    border: 3px solid rgba(240, 195, 109, 0.95);
+    background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.6), rgba(255, 182, 193, 0.2)),
+        linear-gradient(135deg, #f8c8dc 0%, #d6a0f0 100%);
+    border: 3px solid rgba(255, 223, 186, 0.95);
     display: flex;
     align-items: center;
     justify-content: center;
     animation: bob 4s ease-in-out infinite;
+    /* Agregamos un brillo sutil */
+    box-shadow: 0 0 10px rgba(255, 223, 186, 0.7), 0 0 25px rgba(255, 192, 203, 0.5);
 }
 
 @keyframes bob {
     0% {
-        transform: translateY(0);
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-4px) rotate(-2deg);
     }
 
     50% {
-        transform: translateY(-8px);
+        transform: translateY(-8px) rotate(2deg);
+    }
+
+    75% {
+        transform: translateY(-4px) rotate(-1deg);
     }
 
     100% {
-        transform: translateY(0);
+        transform: translateY(0) rotate(0deg);
     }
 }
 
 .controls .mw-btn {
-    background: white;
-    border-radius: 10px;
-    padding: 6px 8px;
-    border: none;
+    background: #fff0f8;
+    border-radius: 12px;
+    padding: 6px 10px;
+    border: 2px solid #ffb6c1;
+    color: #c080e8;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(255, 182, 193, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.controls .mw-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.7);
 }
 
 #ytplayer {
     width: 0;
     height: 0;
 }
+
 
 /* ============================
    FOOTER
@@ -349,6 +371,7 @@ body::before {
     padding: 10px 20px;
     border-radius: 12px;
     border: 1px solid rgba(255, 215, 100, 0.6);
+    text-align: center;
 
     font-family: "Gwendolyn", "Great Vibes", serif;
     font-size: 28px;
