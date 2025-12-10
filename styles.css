@@ -383,15 +383,35 @@ body::before {
 }
 
 /* Imagen CON PERGAMINO DE FONDO */
-.carrusel-frame img {
-    width: 80%;
+.carrusel-frame {
+    display: flex;
+    justify-content: center;
+    /* Centrado horizontal */
+    align-items: center;
+    /* Centrado vertical */
     height: 420px;
-    object-fit: contain;
-    object-position: center;
-    background: url("img/pergamino.png"), rgba(255, 249, 235, 0.85);
+    /* Altura del carrusel */
+    background: url("img/pergamino.png") rgba(255, 249, 235, 0.85);
     background-size: cover;
     background-position: center;
     border-radius: 16px;
+    overflow: hidden;
+}
+
+.carrusel-frame img {
+    width: 80%;
+    /* Ajusta el tamaño de la imagen */
+    height: auto;
+    /* Mantener proporción */
+    object-fit: contain;
+    /* No recorta la imagen */
+    object-position: center;
+    /* Centrar la imagen */
+    border-radius: 16px;
+    display: block;
+    /* Evita espacios extra */
+    margin: 0 auto;
+    /* Centrado horizontal adicional */
 }
 
 /* Títulos princesa */
@@ -409,11 +429,9 @@ body::before {
     font-size: 34px;
 
     /* Relleno blanco y contorno azul */
-    color: #0300a8;
-    -webkit-text-stroke: 2px #7c8500;
-    /* azul para el contorno */
-    text-wrap-style: 2px #9ba205;
-    /* para compatibilidad futura */
+    color: #ffffff;
+    -webkit-text-stroke: 2px #1e3aa8;
+    /* contorno azul */
 
     /* Sombra sutil para mayor legibilidad */
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
