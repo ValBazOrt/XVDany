@@ -287,6 +287,7 @@ body::before {
 #galeria {
     position: relative;
     padding-top: 30px;
+    background: transparent !important;
 }
 
 .carrusel-frame {
@@ -295,6 +296,7 @@ body::before {
     margin: 0 auto;
     border-radius: 20px;
     overflow: hidden;
+    background: transparent !important;
 
     /* Marco dorado con brillo */
     border: 3px solid rgba(255, 215, 100, 0.8);
