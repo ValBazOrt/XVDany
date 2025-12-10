@@ -406,6 +406,6 @@ body::before {
 #detalles .spinner-grow {
     width: 35px;
     height: 35px;
-    animation-duration: 1s !important;
+    animation-duration: 4.2s !important;
     /* más lento */
 }
