@@ -310,20 +310,28 @@ body::before {
 }
 
 @keyframes brilloDorado {
-    0% { box-shadow: 0 0 18px rgba(255, 215, 100, 0.55),
-                     0 0 35px rgba(255, 240, 180, 0.35),
-                     0 0 6px rgba(255, 200, 100, 0.85) inset; }
-    50% { box-shadow: 0 0 26px rgba(255, 235, 150, 0.8),
-                      0 0 45px rgba(255, 255, 200, 0.4),
-                      0 0 10px rgba(255, 230, 140, 0.95) inset; }
-    100% { box-shadow: 0 0 18px rgba(255, 215, 100, 0.55),
-                      0 0 35px rgba(255, 240, 180, 0.35),
-                      0 0 6px rgba(255, 200, 100, 0.85) inset; }
+    0% {
+        box-shadow: 0 0 18px rgba(255, 215, 100, 0.55),
+            0 0 35px rgba(255, 240, 180, 0.35),
+            0 0 6px rgba(255, 200, 100, 0.85) inset;
+    }
+
+    50% {
+        box-shadow: 0 0 26px rgba(255, 235, 150, 0.8),
+            0 0 45px rgba(255, 255, 200, 0.4),
+            0 0 10px rgba(255, 230, 140, 0.95) inset;
+    }
+
+    100% {
+        box-shadow: 0 0 18px rgba(255, 215, 100, 0.55),
+            0 0 35px rgba(255, 240, 180, 0.35),
+            0 0 6px rgba(255, 200, 100, 0.85) inset;
+    }
 }
 
 /* Imagen CON PERGAMINO DE FONDO */
 .carrusel-frame img {
-    width: 100%;
+    width: 80%;
     height: 420px;
     object-fit: contain;
     object-position: center;
@@ -345,7 +353,7 @@ body::before {
     font-family: "Gwendolyn", "Great Vibes", serif;
     font-size: 28px;
     color: #2921a1;
-    text-shadow: 0 0 6px rgba(0,0,0,0.7);
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
 }
 
 /* Fade más elegante */
@@ -356,7 +364,7 @@ body::before {
 /* Flechas */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
     background-size: 75%;
 }
 
@@ -365,6 +373,7 @@ body::before {
     .carrusel-frame img {
         height: 300px;
     }
+
     .carousel-caption {
         font-size: 20px;
         padding: 6px 16px;
