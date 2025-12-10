@@ -430,7 +430,7 @@ body::before {
 
     /* Relleno blanco y contorno azul */
     color: #ffffff;
-    -webkit-text-stroke: 2px #1e3aa8;
+    -webkit-text-stroke: 2px #ffffff;
     /* contorno azul */
 
     /* Sombra sutil para mayor legibilidad */
