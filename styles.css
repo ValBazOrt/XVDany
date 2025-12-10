@@ -397,7 +397,7 @@ body::before {
 /* Títulos princesa */
 .carousel-caption {
     bottom: 20px;
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.916);
     backdrop-filter: blur(6px);
     padding: 10px 20px;
     border-radius: 12px;
@@ -409,10 +409,10 @@ body::before {
     font-size: 34px;
 
     /* Relleno blanco y contorno azul */
-    color: #ffffff;
-    -webkit-text-stroke: 2px #1e3aa8;
+    color: #0300a8;
+    -webkit-text-stroke: 2px #7c8500;
     /* azul para el contorno */
-    text-wrap-style: 2px #1e3aa8;
+    text-wrap-style: 2px #9ba205;
     /* para compatibilidad futura */
 
     /* Sombra sutil para mayor legibilidad */
