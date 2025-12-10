@@ -373,7 +373,7 @@ body::before {
 #detalles .section-title {
     font-family: "Great Vibes", cursive;
     font-size: 56px;
-    color: #052b9b;
+    color: #4700b9;
     /* Dorado suave */
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
@@ -382,7 +382,7 @@ body::before {
 #detalles p,
 #detalles li {
     font-family: "Parisienne", cursive;
-    font-size: 40px;
+    font-size: 35px;
     color: #1c1192;
     line-height: 1.6;
 }
@@ -390,16 +390,16 @@ body::before {
 /* Frases especiales */
 #detalles .quote {
     font-family: "Great Vibes", cursive;
-    font-size: 50px;
+    font-size: 40px;
     color: #2608d1;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Labels como “Fecha”, “Hora”, etc */
 #detalles strong {
-    color: #1d2fcd;
+    color: #000000;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 /* Paleta de colores */
