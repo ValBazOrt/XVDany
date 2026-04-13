@@ -198,14 +198,14 @@
                 </button>
             </div>
         </section>
-        
+
         <!-- MÚSICA (reproductor oculto YouTube) -->
         <div id="yt-player-wrapper" style="display:none;">
             <iframe id="ytplayer"
-            src="https://www.youtube.com/embed/g0Ocaw8um1g?rel=0&enablejsapi=1&controls=0&start=0&end=28&loop=1&playlist=g0Ocaw8um1g&autoplay=1"
-            allow="autoplay; encrypted-media"></iframe>
+                src="https://www.youtube.com/embed/g0Ocaw8um1g?rel=0&enablejsapi=1&controls=0&start=0&end=28&loop=1&playlist=g0Ocaw8um1g&autoplay=1"
+                allow="autoplay; encrypted-media"></iframe>
         </div>
-        
+
         <!-- FOOTER -->
         <footer class="footer py-4 bg-gradient">
             <div class="container text-center">
@@ -214,7 +214,7 @@
             </div>
         </footer>
     </main>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -337,10 +337,12 @@
                 const i = invitados[id];
 
                 contenedor.innerHTML = `
-            👑 <strong>${i.nombre}</strong><br>
-            🎟️ Boletos: <strong>${i.boletos}</strong><br>
-            🍽️ Mesa: <strong>${i.mesa}</strong>
-        `;
+    <div class="inv-box">
+        <div class="inv-item">👑 ${i.nombre}</div>
+        <div class="inv-item">🎟️ Boletos: <span>${i.boletos}</span></div>
+        <div class="inv-item">🍽️ Mesa: <span>${i.mesa}</span></div>
+    </div>
+`;
                 // Generar QR
                 new QRCode(document.getElementById("qr-code"), {
                     text: `https://valbazort.github.io/XVDany/verificacion.html?id=${id}`,
