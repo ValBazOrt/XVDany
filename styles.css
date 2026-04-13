@@ -666,3 +666,12 @@ small.text-muted {
     font-weight: bold;
     color: #000;
 }
+
+/* QR */
+#qr-code {
+    width: 140px;
+    min-width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
