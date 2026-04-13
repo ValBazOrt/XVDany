@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Validación Invitado</title>
+</head>
+<body style="font-family: Arial; text-align:center; padding:40px;">
+
+<h1>🎟️ Validación de Invitado</h1>
+
+<div id="info"></div>
+
+<script>
+const invitados = {
+    marco: { nombre: "Marco", boletos: 3, mesa: 5 },
+    ricardo: { nombre: "Ricardo", boletos: 2, mesa: 3 },
+    valeria: { nombre: "Valeria", boletos: 5, mesa: 1 }
+};
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+const contenedor = document.getElementById("info");
+
+if (invitados[id]) {
+    const i = invitados[id];
+
+    contenedor.innerHTML = `
+        <h2>${i.nombre}</h2>
+        <p>🎟️ Boletos: ${i.boletos}</p>
+        <p>🍽️ Mesa: ${i.mesa}</p>
+        <p style="color:green; font-weight:bold;">✔ Invitado válido</p>
+    `;
+} else {
+    contenedor.innerHTML = `<p style="color:red;">❌ Invitado no válido</p>`;
+}
+</script>
+
+</body>
+</html>

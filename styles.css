@@ -490,7 +490,7 @@ body::before {
 #detalles .quote {
     font-family: "Cormorant Garamond";
     font-size: 31px;
-    color: #3417da;
+    color: #000a68;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
