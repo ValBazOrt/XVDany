@@ -676,9 +676,10 @@ small.text-muted {
     align-items: center;
 }
 
-.confirmacion {
+#detalles .confirmacion {
     color: #000000;
-    font-size: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
     text-align: center;
     letter-spacing: 1px;
 }
