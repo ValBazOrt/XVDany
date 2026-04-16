@@ -675,3 +675,10 @@ small.text-muted {
     justify-content: center;
     align-items: center;
 }
+
+.confirmacion {
+    color: #000000;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 1px;
+}
