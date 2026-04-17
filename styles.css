@@ -685,22 +685,31 @@ small.text-muted {
 }
 
 /* =========================
-   PADRES DE FAMILIA
+   PADRES Y PADRINOS PREMIUM
 ========================= */
 
 .hero .padres {
-    margin-top: 22px;
+    margin-top: 30px;
     text-align: center;
     color: #0d3e8e;
 }
 
-/* TÍTULO */
+/* TITULOS */
 .hero .padres .titulo {
-    font-size: 16px;
-    letter-spacing: 2px;
-    margin-bottom: 25px;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin: 30px 0 20px;
     color: #0d3e8e;
+    font-weight: bold;
+    text-transform: uppercase;
+
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* PADRINOS DIFERENTE TONO */
+.hero .padres .padrinos {
+    color: #6ea8f7;
 }
 
 /* CONTENEDOR */
@@ -708,7 +717,7 @@ small.text-muted {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
     position: relative;
 }
@@ -718,23 +727,12 @@ small.text-muted {
     width: 45%;
 }
 
-/* PADRE IZQUIERDA */
-.hero .padres .padre {
-    text-align: center;
-}
-
-/* MADRE DERECHA */
-.hero .padres .madre {
-    text-align: center;
-}
-
-
-/* NOMBRE */
+/* NOMBRES */
 .hero .padres .nombre {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-weight: 700;  
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 20px;
     color: #000a68;
 
     display: flex;
@@ -744,15 +742,23 @@ small.text-muted {
 
 /* ICONOS */
 .hero .padres .icono {
-    font-size: 30px;
+    font-size: 28px;
 }
 
-/* AJUSTE ICONO DERECHA */
+/* ALINEACIONES */
+.hero .padres .padre {
+    text-align: left;
+}
+
+.hero .padres .madre {
+    text-align: right;
+}
+
 .hero .padres .madre .nombre {
     justify-content: flex-end;
 }
 
-/* LÍNEA CENTRAL DECORATIVA */
+/* LINEA CENTRAL DECORATIVA */
 .hero .padres .nombres::after {
     content: "";
     position: absolute;
@@ -763,10 +769,7 @@ small.text-muted {
     background: linear-gradient(to bottom, transparent, #0d3e8e, transparent);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .hero .padres .nombres {
         flex-direction: column;
