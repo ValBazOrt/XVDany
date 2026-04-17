@@ -683,3 +683,105 @@ small.text-muted {
     text-align: center;
     letter-spacing: 1px;
 }
+
+/* =========================
+   PADRES DE FAMILIA
+========================= */
+
+.hero .padres {
+    margin-top: 40px;
+    text-align: center;
+    color: #0d3e8e;
+}
+
+/* TÍTULO */
+.hero .padres .titulo {
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    color: #0d3e8e;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* CONTENEDOR */
+.hero .padres .nombres {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* COLUMNAS */
+.hero .padres .lado {
+    width: 45%;
+}
+
+/* PADRE IZQUIERDA */
+.hero .padres .padre {
+    text-align: center;
+}
+
+/* MADRE DERECHA */
+.hero .padres .madre {
+    text-align: center;
+}
+
+
+/* NOMBRE */
+.hero .padres .nombre {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #000a68;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ICONOS */
+.hero .padres .icono {
+    font-size: 50px;
+}
+
+/* AJUSTE ICONO DERECHA */
+.hero .padres .madre .nombre {
+    justify-content: flex-end;
+}
+
+/* LÍNEA CENTRAL DECORATIVA */
+.hero .padres .nombres::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    bottom: 15%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, #0d3e8e, transparent);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+    .hero .padres .nombres {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero .padres .nombres::after {
+        display: none;
+    }
+
+    .hero .padres .lado {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero .padres .nombre {
+        justify-content: center;
+    }
+}
