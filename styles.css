@@ -151,7 +151,7 @@ body::before {
 
 .hero-title {
     font-family: "Great Vibes", serif;
-    font-size: 56px;
+    font-size: 60px;
     font-weight: bolder;
     color: #000a68;
     text-shadow: #000a68;
@@ -696,7 +696,7 @@ small.text-muted {
 
 /* TÍTULO */
 .hero .padres .titulo {
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 2px;
     margin-bottom: 25px;
     color: #0d3e8e;
@@ -734,7 +734,7 @@ small.text-muted {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 700;  
-    font-size: 20px;
+    font-size: 16px;
     color: #000a68;
 
     display: flex;
