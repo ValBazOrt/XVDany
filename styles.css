@@ -164,7 +164,7 @@ body::before {
 }
 
 .quote {
-    font-size: 20px;
+    font-size: 24px;
     /* Ajusta el tamaño a tu gusto */
     font-weight: bold;
 }
@@ -734,7 +734,7 @@ small.text-muted {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 700;  
-    font-size: 16px;
+    font-size: 18px;
     color: #000a68;
 
     display: flex;
