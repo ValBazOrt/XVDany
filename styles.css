@@ -689,14 +689,14 @@ small.text-muted {
 ========================= */
 
 .hero .padres {
-    margin-top: 40px;
+    margin-top: 22px;
     text-align: center;
     color: #0d3e8e;
 }
 
 /* TÍTULO */
 .hero .padres .titulo {
-    font-size: 32px;
+    font-size: 20px;
     letter-spacing: 2px;
     margin-bottom: 25px;
     color: #0d3e8e;
@@ -732,8 +732,9 @@ small.text-muted {
 /* NOMBRE */
 .hero .padres .nombre {
     font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    font-weight: 600;
+    font-style: italic;
+    font-weight: 700;  
+    font-size: 20px;
     color: #000a68;
 
     display: flex;
@@ -743,7 +744,7 @@ small.text-muted {
 
 /* ICONOS */
 .hero .padres .icono {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 /* AJUSTE ICONO DERECHA */
