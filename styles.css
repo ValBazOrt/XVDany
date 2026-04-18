@@ -146,7 +146,7 @@ body::before {
 }
 
 .logo-crest {
-    font-size: 60px;
+    font-size: 54px;
 }
 
 .hero-title {
@@ -164,8 +164,7 @@ body::before {
 }
 
 .quote {
-    font-size: 24px;
-    /* Ajusta el tamaño a tu gusto */
+    font-size: 19px;
     font-weight: bold;
 }
 
