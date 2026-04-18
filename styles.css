@@ -484,7 +484,7 @@ body::before {
 #detalles p,
 #detalles li {
     font-family: "Playfair Display";
-    font-size: 26px;
+    font-size: 20px;
     color: #000000;
     line-height: 1.6;
 }
@@ -492,7 +492,7 @@ body::before {
 /* Frases especiales */
 #detalles .quote {
     font-family: "Cormorant Garamond";
-    font-size: 31px;
+    font-size: 22px;
     color: #000a68;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -501,7 +501,7 @@ body::before {
 #detalles strong {
     color: #000a68;
     font-weight: bold;
-    font-size: 33px;
+    font-size: 22px;
 }
 
 /* Paleta de colores */
@@ -610,7 +610,7 @@ small.text-muted {
     }
 
     .hero h1 {
-        font-size: 24px;
+        font-size: 32px;
         line-height: 1.2;
     }
 
