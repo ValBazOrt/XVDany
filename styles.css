@@ -151,7 +151,7 @@ body::before {
 
 .hero-title {
     font-family: "Great Vibes", serif;
-    font-size: 60px;
+    font-size: 54px;
     font-weight: bolder;
     color: #000a68;
     text-shadow: #000a68;
@@ -159,7 +159,7 @@ body::before {
 
 .hero-title .accent {
     color: var(--azul-neblina);
-    font-size: 36px;
+    font-size: 44px;
     font-weight: bold;
 }
 
@@ -697,7 +697,8 @@ small.text-muted {
 /* TITULOS */
 .hero .padres .titulo {
     font-family: 'Playfair Display', serif;
-    font-size: 18px;
+    font-style: italic;
+    font-size: 15px;
     letter-spacing: 3px;
     margin: 30px 0 20px;
     color: #0d3e8e;
@@ -732,7 +733,7 @@ small.text-muted {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px;
     color: #000a68;
 
     display: flex;
@@ -742,7 +743,7 @@ small.text-muted {
 
 /* ICONOS */
 .hero .padres .icono {
-    font-size: 28px;
+    font-size: 34px;
 }
 
 /* ALINEACIONES */
