@@ -499,7 +499,7 @@ body::before {
 
 /* Labels como “Fecha”, “Hora”, etc */
 #detalles strong {
-    color: #000a68;
+    color: #000000;
     font-weight: bold;
     font-size: 22px;
 }
