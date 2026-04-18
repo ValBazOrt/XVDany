@@ -684,109 +684,68 @@ small.text-muted {
     letter-spacing: 1px;
 }
 
-/* =========================
-   PADRES Y PADRINOS PREMIUM
-========================= */
-
-.hero .padres {
-    margin-top: 30px;
-    text-align: center;
-    color: #0d3e8e;
-}
-
-/* TITULOS */
-.hero .padres .titulo {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 15px;
-    letter-spacing: 3px;
-    margin: 30px 0 20px;
-    color: #0d3e8e;
-    font-weight: bold;
-    text-transform: uppercase;
-
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* PADRINOS DIFERENTE TONO */
-.hero .padres .padrinos {
-    color: #6ea8f7;
-}
-
 /* CONTENEDOR */
-.hero .padres .nombres {
+.nombres {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     max-width: 800px;
-    margin: 0 auto;
-    position: relative;
+    margin: 20px auto;
+    gap: 20px;
 }
 
 /* COLUMNAS */
-.hero .padres .lado {
-    width: 45%;
+.lado {
+    width: 48%;
 }
 
-/* NOMBRES */
-.hero .padres .nombre {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-weight: 700;
-    font-size: 18px;
-    color: #000a68;
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* ICONOS */
-.hero .padres .icono {
-    font-size: 34px;
-}
-
-/* ALINEACIONES */
-.hero .padres .padre {
+/* IZQUIERDA */
+.padre {
     text-align: left;
 }
 
-.hero .padres .madre {
+/* DERECHA */
+.madre {
     text-align: right;
 }
 
-.hero .padres .madre .nombre {
-    justify-content: flex-end;
+/* TEXTO */
+.nombre {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 20px;
+    color: #000a68;
+
+    text-align: center; /* 👈 centra el texto dentro */
 }
 
-/* LINEA CENTRAL DECORATIVA */
-.hero .padres .nombres::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 15%;
-    bottom: 15%;
-    width: 1px;
-    background: linear-gradient(to bottom, transparent, #0d3e8e, transparent);
+/* TITULO */
+.titulo {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-/* RESPONSIVE */
+/* TRUCO PARA ALINEAR ALTURAS */
+.invisible {
+    visibility: hidden;
+}
+
+/* 📱 RESPONSIVE */
 @media (max-width: 768px) {
-    .hero .padres .nombres {
+    .nombres {
         flex-direction: column;
-        gap: 20px;
+        align-items: center;
     }
 
-    .hero .padres .nombres::after {
-        display: none;
-    }
-
-    .hero .padres .lado {
+    .lado {
         width: 100%;
-        text-align: center;
+        text-align: center !important;
     }
 
-    .hero .padres .nombre {
-        justify-content: center;
+    .nombre {
+        text-align: center;
     }
 }
