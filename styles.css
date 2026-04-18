@@ -151,10 +151,13 @@ body::before {
 
 .hero-title {
     font-family: "Great Vibes", serif;
-    font-size: 54px;
+    
+    font-size: clamp(32px, 6vw, 64px); 
+    /* mínimo 32px, crece con pantalla, máximo 64px */
+    word-break: break-word;
     font-weight: bolder;
     color: #000a68;
-    text-shadow: #000a68;
+    line-height: 1.1;
 }
 
 .hero-title .accent {
