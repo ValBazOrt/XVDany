@@ -77,10 +77,17 @@
     "boletos": 2,
     "mesa": 4
   },
+
   {
     "id": "Oca",
     "nombre": "Veronica Ramirez Salas",
     "boletos": 2,
+    "mesa": 4
+  },
+  {
+    "id": "JoseAlfredo",
+    "nombre": "Jose Alfredo Hernandez",
+    "boletos": 4,
     "mesa": 4
   },
   {
@@ -152,6 +159,12 @@
   {
     "id": "AntonioRF",
     "nombre": "Antonio Ramirez Franco",
+    "boletos": 3,
+    "mesa": 8
+  },
+{
+    "id": "MireyaGM",
+    "nombre": "Mireya Garrido Morales",
     "boletos": 3,
     "mesa": 8
   },
@@ -333,6 +346,18 @@
     "id": "LizRP",
     "nombre": "Liz Rojas Pavon",
     "boletos": 2,
+    "mesa": 16
+  },
+{
+    "id": "DerianRH",
+    "nombre": "Derian Ramirez Hernandez",
+    "boletos": 3,
+    "mesa": 16
+  },
+  {
+    "id": "MonseAna",
+    "nombre": "Monse Y Ana",
+    "boletos": 4,
     "mesa": 16
   },
   {
