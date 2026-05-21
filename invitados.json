@@ -94,8 +94,7 @@
   { "id": "AndreaG", "nombre": "Andrea Gutierrez", "boletos": 1, "mesa": 22 },
   { "id": "FernandaL", "nombre": "Fernanda Lazcano", "boletos": 2, "mesa": 22 },
   { "id": "MariaJO", "nombre": "Maria Jose Ortega", "boletos": 1, "mesa": 22 },
-  { "id": "MariaJP", "nombre": "Maria Jose Ponce", "boletos": 1, "mesa": 22 },
-  { "id": "NataliaC", "nombre": "Natalia Cazares", "boletos": 1, "mesa": 22 },
+  { "id": "NataliaC", "nombre": "Natalia Cazares", "boletos": 2, "mesa": 22 },
 
   { "id": "AhitziryO", "nombre": "Ahitziry Ortega", "boletos": 1, "mesa": 23 },
   { "id": "AlbalineG", "nombre": "Albaline Gregoria", "boletos": 2, "mesa": 23 },
@@ -113,5 +112,6 @@
   { "id": "MariaJC", "nombre": "Maria Jose Cabrera", "boletos": 1, "mesa": 24 },
   { "id": "NataliaA", "nombre": "Natalia Avila", "boletos": 1, "mesa": 24 },
   { "id": "RubiS", "nombre": "Rubi Sierra", "boletos": 1, "mesa": 24 },
+  { "id": "MariaJP", "nombre": "Maria Jose Ponce", "boletos": 1, "mesa": 24 },
   { "id": "VeronicaH", "nombre": "Veronica Hernandez", "boletos": 1, "mesa": 24 }
 ]
